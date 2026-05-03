@@ -1,0 +1,250 @@
+<BODY ""> Premi Opzione+1 per la modalità lettore 
+  <SPAN "acsb-sr-alert acsb-sr-only"> Premi Opzione+1 per la modalità lettore 
+  <ACCESS-WIDGET-UI "notranslate"> 
+  <A "acsb-sr-only"> Guida all'accessibilità per lettori dell
+  <ACCESS-WIDGET-UI "notranslate"> 
+  <ACCESS-WIDGET-UI "notranslate"> 
+  <ACCESS-WIDGET-UI "notranslate"> 
+  <APP-ROOT ""> Acquisto biglietto
+account_circle
+IT
+exp
+    <B2C-HEADER ""> Acquisto biglietto
+account_circle
+IT
+exp
+      <HEADER "header"> Acquisto biglietto
+account_circle
+IT
+exp
+        <DIV#mid-layer ""> Acquisto biglietto
+account_circle
+IT
+exp
+          <DIV "mid-layer-container"> Acquisto biglietto
+account_circle
+IT
+exp
+            <DIV "logo-musei-italiani"> Acquisto biglietto
+              <BUTTON aria="Torna alla home" "btn-home d-md-none"> 
+                <IMG#logo-mi-mini "d-md-none img-fluid"> 
+              <A ""> 
+                <IMG#logo-musei-ita "d-none d-md-inline"> 
+              <SPAN "d-none d-md-inline text-title-header"> Acquisto biglietto
+            <NAV "info-links"> account_circle
+IT
+expand_more
+              <BUTTON aria="Apri barra navigazione laterale" "reset-btn-style d-flex"> account_circle
+                <SPAN "info-links-item material-symbols-sharp nav-icon"> account_circle
+              <BUTTON aria="Apri sezione di cambio lingua" "reset-btn-style info-links-item lang-switch justify-content-"> IT
+expand_more
+                <SPAN "lang-switch-btn"> IT
+                <SPAN "material-symbols-sharp nav-icon"> expand_more
+        <NAV#b2c-navbar "bg-light"> Area personale
+Ciao
+Impostazioni
+home
+Ho
+          <DIV#burger-menu ""> Area personale
+Ciao
+Impostazioni
+home
+Ho
+            <DIV#side-menu ""> Area personale
+Ciao
+Impostazioni
+home
+Ho
+              <DIV "side-menu-header"> Area personale
+                <H2 ""> Area personale
+              <DIV "side-menu-body"> Ciao
+Impostazioni
+home
+Home
+chevron_righ
+                <DIV "side-menu-welcome"> Ciao
+                <UL "side-menu-item-list"> Impostazioni
+home
+Home
+chevron_right
+acc
+                <DIV "side-menu-footer"> Autenticazione richiesta
+Registrati per 
+            <DIV#overlay "d-none"> 
+      <DIV#lang-drop-overlay "d-none"> 
+      <SIMPLE-CONFIRM-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> Header.CONFIRM_REDIRECT_MODAL_TITLEclose
+            <DIV "modal-header"> Header.CONFIRM_REDIRECT_MODAL_TITLEclose
+              <H3 "modal-title"> Header.CONFIRM_REDIRECT_MODAL_TITLE
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <P ""> Stai per abbandonare, perderai i dati se
+            <DIV "modal-btn"> AnnullaConferma
+              <BUTTON aria="Annulla" "modal-btn btn-dismiss"> Annulla
+              <BUTTON aria="Conferma" "modal-btn btn-confirm"> Conferma
+      <SIMPLE-CONFIRM-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> Confermi la cancellazione dell'account?c
+            <DIV "modal-header"> Confermi la cancellazione dell'account?c
+              <H3 "modal-title"> Confermi la cancellazione dell'account?
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <P ""> Sei sicuro di voler procedere con la can
+            <DIV "modal-btn"> ChiudiConferma
+              <BUTTON aria="Chiudi" "modal-btn btn-dismiss"> Chiudi
+              <BUTTON aria="Conferma" "modal-btn btn-confirm"> Conferma
+      <SIMPLE-CONFIRM-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> Account cancellato con successo Il suo a
+            <DIV "modal-header"> Account cancellato con successo
+              <H3 "modal-title"> Account cancellato con successo
+            <P ""> Il suo account è stato cancellato con su
+            <DIV "modal-btn"> Conferma
+              <BUTTON aria="Conferma" "modal-btn btn-confirm"> Conferma
+      <SIMPLE-ERROR-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> error  Errore durante la cancellazione c
+            <DIV "modal-header"> error  Errore durante la cancellazione c
+              <DIV "title-wrapper"> error  Errore durante la cancellazione
+                <SPAN "material-symbols-sharp error-icon"> error
+                <H3 "modal-title"> Errore durante la cancellazione
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <P ""> Si è verificato un errore durante la can
+            <DIV "modal-btn"> Continua
+              <BUTTON aria="Continua" "modal-btn btn-confirm"> Continua
+      <SIMPLE-ERROR-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> error  Errore caricamento informazioni u
+            <DIV "modal-header"> error  Errore caricamento informazioni u
+              <DIV "title-wrapper"> error  Errore caricamento informazioni u
+                <SPAN "material-symbols-sharp error-icon"> error
+                <H3 "modal-title"> Errore caricamento informazioni utente
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <P ""> E' stato riscontrato un errore durante i
+            <DIV "modal-btn"> Continua
+              <BUTTON aria="Continua" "modal-btn btn-confirm"> Continua
+      <LANGUAGE-SELECT-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> translate Seleziona linguacloseItalianoI
+            <DIV "modal-header"> translate Seleziona linguaclose
+              <DIV "title-wrapper"> translate Seleziona lingua
+                <SPAN "material-symbols-sharp tkt-icon"> translate
+                <H3 "modal-title"> Seleziona lingua
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <DIV#supported-languages ""> ItalianoItalianoEnglishIngleseEspañolSpa
+              <FORM "ng-untouched ng-pristine ng-valid"> ItalianoItalianoEnglishIngleseEspañolSpa
+                <FIELDSET ""> ItalianoItalianoEnglishIngleseEspañolSpa
+            <DIV "bottom-sect"> Seleziona
+              <BUTTON#select-lang ""> Seleziona
+                <SPAN ""> Seleziona
+    <MAIN ""> Dettagli sul Museo selezionato:Museo sel
+      <ROUTER-OUTLET ""> 
+      <APP-BUY-TICKETLESS ""> Dettagli sul Museo selezionato:Museo sel
+        <DIV "buy-ticketless-content"> Dettagli sul Museo selezionato:Museo sel
+          <MUSEUM-INFO-BANNER ""> Dettagli sul Museo selezionato:Museo sel
+            <DIV#info-museum-banner ""> Dettagli sul Museo selezionato:Museo sel
+              <DIV "sr-only"> Dettagli sul Museo selezionato:Museo sel
+                <P ""> Dettagli sul Museo selezionato:Museo sel
+              <DIV "info-container"> Anfiteatro campano
+schedule
+Aperto - Chi
+                <DIV "name-hours"> Anfiteatro campano
+schedule
+Aperto - Chi
+                <DIV "thumbnail"> 
+          <DIV "row-md buy-ticket-container"> Scegli cosa vorresti acquistare:
+Informa
+            <PURCHASE-SELECTOR ""> Scegli cosa vorresti acquistare:
+Informa
+              <DIV "purchase-selector-container"> Scegli cosa vorresti acquistare:
+Informa
+                <H2 "sr-only"> Scegli cosa vorresti acquistare:
+                <DIV "visitors-info-container py-3"> Informazioni per i visitatori
+                <DIV "ticket-choice-cards"> Biglietti
+              <APP-SIMPLE-DETAILS-DIALOG ""> 
+                <DIALOG-WRAPPER "info-dialog"> 
+            <DIV ""> 
+        <SIMPLE-ERROR-DIALOG ""> 
+          <DIALOG-WRAPPER ""> 
+            <DIALOG#custom-dialog ""> error  Errore pagamento Il pagamento non
+              <DIV "modal-header"> error  Errore pagamento
+                <DIV "title-wrapper"> error  Errore pagamento
+              <P ""> Il pagamento non e' andato a buon fine.
+              <DIV "modal-btn"> Continua
+                <BUTTON aria="Continua" "modal-btn btn-confirm"> Continua
+        <SIMPLE-CONFIRM-DIALOG ""> 
+          <DIALOG-WRAPPER ""> 
+            <DIALOG#custom-dialog ""> Acquisto completato Ti ringraziamo per l
+              <DIV "modal-header"> Acquisto completato
+                <H3 "modal-title"> Acquisto completato
+              <P ""> Ti ringraziamo per l'acquisto.
+Stiamo cr
+              <DIV "modal-btn"> Chiudi
+                <BUTTON aria="Chiudi" "modal-btn btn-confirm"> Chiudi
+    <B2C-FOOTER ""> CONTATTI
+Direzione generale Musei
+via di
+      <FOOTER "it-footer"> CONTATTI
+Direzione generale Musei
+via di
+        <DIV "it-footer-main"> CONTATTI
+Direzione generale Musei
+via di
+          <DIV "container-footer px-4 py-0"> CONTATTI
+Direzione generale Musei
+via di
+            <SECTION "pt-3 px-2"> 
+              <DIV#b2c-footer-logos ""> 
+                <IMG "footerImg"> 
+                <A aria="MIC Ministero della Cultura - Collegamento a sito esterno - Apertura in nuova scheda" ""> 
+                <IMG "footerImg"> 
+            <SECTION "mt-4 border-white border-top px-0 pb-4"> CONTATTI
+Direzione generale Musei
+via di
+              <DIV "row pt-4"> CONTATTI
+                <DIV "col-md-4 pb-md-2"> CONTATTI
+              <DIV "row"> Direzione generale Musei
+via di San Mich
+                <DIV "col-md-4"> Direzione generale Musei
+via di San Mich
+                <DIV "col-md-4 pt-md-0 p-smn"> Helpdesk biglietti
+mail: info@museiitali
+                <DIV "col-md-4 pt-md-0 p-smn"> Seguici su:
+        <DIV "it-footer-small-prints clearfix"> © 2026, Direzione generale Musei
+Dichiar
+          <DIV "container-footer"> © 2026, Direzione generale Musei
+Dichiar
+            <UL "it-footer-small-prints-list list-inline mb-0 d-flex flex-col"> © 2026, Direzione generale Musei
+Dichiar
+              <LI "list-inline-item"> © 2026, Direzione generale Musei
+                <SMALL "mb-0 small font-weight-light"> © 2026, Direzione generale Musei
+              <LI "list-inline-item"> Dichiarazione di accesibilità
+                <A "link-footer"> Dichiarazione di accesibilità
+              <LI "list-inline-item"> Privacy Policy
+                <A "link-footer"> Privacy Policy
+    <LOGIN-REQUEST-DIALOG ""> 
+      <DIALOG-WRAPPER ""> 
+        <DIALOG#custom-dialog ""> La tua sessione è scadutacloseAbbiamo ri
+          <DIV "modal-header"> La tua sessione è scadutaclose
+            <H3 "modal-title"> La tua sessione è scaduta
+            <BUTTON aria="Chiudi" ""> close
+              <SPAN "material-symbols-sharp"> close
+          <P ""> Abbiamo rilevato una sessione scaduta. P
+          <DIV "modal-btn-container"> Continua a navigareVai a login
+            <BUTTON "modal-btn keep-browsing"> Continua a navigare
+            <BUTTON "modal-btn go-to-login"> Vai a login
+  <LINK ""> 
+  <LINK ""> 
+  <LINK ""> 
+  <LINK ""> 
+  <LINK ""> 
+  <LINK ""> 
+  <SCRIPT ""> 
+  <SCRIPT ""> 
+  <SCRIPT ""> 
+  <IFRAME ""> 
+  <DIV "acsb-trigger acsb-widget"> 

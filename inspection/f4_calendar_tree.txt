@@ -1,0 +1,498 @@
+<BODY ""> Guida all'accessibilità per lettori dello schermo, feedback 
+  <ACCESS-WIDGET-UI "notranslate"> 
+  <A "acsb-sr-only"> Guida all'accessibilità per lettori dello schermo, feedback 
+  <ACCESS-WIDGET-UI "notranslate"> 
+  <ACCESS-WIDGET-UI "notranslate"> 
+  <ACCESS-WIDGET-UI "notranslate"> 
+  <APP-ROOT ""> Acquisto biglietto
+account_circle
+IT
+expand_more
+Area person
+    <B2C-HEADER ""> Acquisto biglietto
+account_circle
+IT
+expand_more
+Area person
+      <HEADER "header"> Acquisto biglietto
+account_circle
+IT
+expand_more
+Area person
+        <DIV#mid-layer ""> Acquisto biglietto
+account_circle
+IT
+expand_more
+          <DIV "mid-layer-container"> Acquisto biglietto
+account_circle
+IT
+expand_more
+            <DIV "logo-musei-italiani"> Acquisto biglietto
+              <BUTTON aria="Torna alla home" "btn-home d-md-none"> 
+                <IMG#logo-mi-mini "d-md-none img-fluid"> 
+              <A ""> 
+                <IMG#logo-musei-ita "d-none d-md-inline"> 
+              <SPAN "d-none d-md-inline text-title-header"> Acquisto biglietto
+            <NAV "info-links"> account_circle
+IT
+expand_more
+              <BUTTON aria="Apri barra navigazione laterale" "reset-btn-style d-flex"> account_circle
+                <SPAN "info-links-item material-symbols-sharp nav-icon"> account_circle
+              <BUTTON aria="Apri sezione di cambio lingua" "reset-btn-style info-links-item lang-switch justify-content-end justify-content-"> IT
+expand_more
+                <SPAN "lang-switch-btn"> IT
+                <SPAN "material-symbols-sharp nav-icon"> expand_more
+        <NAV#b2c-navbar "bg-light"> Area personale
+Ciao
+Impostazioni
+home
+Home
+chevron_right
+acc
+          <DIV#burger-menu ""> Area personale
+Ciao
+Impostazioni
+home
+Home
+chevron_right
+acc
+            <DIV#side-menu ""> Area personale
+Ciao
+Impostazioni
+home
+Home
+chevron_right
+acc
+              <DIV "side-menu-header"> Area personale
+                <H2 ""> Area personale
+              <DIV "side-menu-body"> Ciao
+Impostazioni
+home
+Home
+chevron_right
+account_circle
+Il 
+                <DIV "side-menu-welcome"> Ciao
+                  <SPAN ""> Ciao
+                <UL "side-menu-item-list"> Impostazioni
+home
+Home
+chevron_right
+account_circle
+Il mio p
+                  <LEGEND ""> Impostazioni
+                  <LI ""> home
+Home
+chevron_right
+                    <BUTTON aria="Home" "w-100 reset-btn-style side-menu-item mt-4"> home
+Home
+chevron_right
+                      <DIV ""> home
+Home
+                        <SPAN "material-symbols-sharp"> home
+                        <SPAN ""> Home
+                      <SPAN "material-symbols-sharp rtl-icon"> chevron_right
+                  <LI ""> account_circle
+Il mio profilo
+chevron_right
+                    <BUTTON aria="Il mio profilo" "w-100 reset-btn-style side-menu-item mt-4"> account_circle
+Il mio profilo
+chevron_right
+                      <DIV ""> account_circle
+Il mio profilo
+                        <SPAN "material-symbols-sharp"> account_circle
+                        <SPAN ""> Il mio profilo
+                      <SPAN "material-symbols-sharp rtl-icon"> chevron_right
+                  <LI ""> confirmation_number
+I miei Biglietti
+chevron_right
+                    <BUTTON aria="I miei Biglietti" "w-100 reset-btn-style side-menu-item"> confirmation_number
+I miei Biglietti
+chevron_right
+                      <DIV ""> confirmation_number
+I miei Biglietti
+                        <SPAN "material-symbols-sharp"> confirmation_number
+                        <SPAN ""> I miei Biglietti
+                      <SPAN "material-symbols-sharp rtl-icon"> chevron_right
+                  <LI ""> import_contacts
+Rubrica visitatori
+chevron_right
+                    <BUTTON aria="Rubrica visitatori" "w-100 reset-btn-style side-menu-item"> import_contacts
+Rubrica visitatori
+chevron_right
+                      <DIV ""> import_contacts
+Rubrica visitatori
+                        <SPAN "material-symbols-sharp"> import_contacts
+                        <SPAN ""> Rubrica visitatori
+                      <SPAN "material-symbols-sharp rtl-icon"> chevron_right
+                  <BUTTON "w-100 reset-btn-style side-menu-item d-none"> search Acquista chevron_right
+                    <DIV ""> search Acquista
+                      <SPAN "material-symbols-sharp"> search
+                      <SPAN ""> Acquista
+                    <SPAN "material-symbols-sharp rtl-icon"> chevron_right
+                <DIV "side-menu-footer"> Autenticazione richiesta
+Registrati per comprare i biglietti
+                  <DIV "footer-content"> Autenticazione richiesta
+Registrati per comprare i biglietti
+                    <DIV "non-logged-user-section"> Autenticazione richiesta
+Registrati per comprare i biglietti
+                      <SPAN "footer-title"> Autenticazione richiesta
+                      <SPAN "footer-message"> Registrati per comprare i biglietti
+                      <BUTTON ""> Accedi / Registrati
+            <DIV#overlay "d-none"> 
+      <DIV#lang-drop-overlay "d-none"> 
+      <SIMPLE-CONFIRM-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> Header.CONFIRM_REDIRECT_MODAL_TITLEclose Stai per abbandonar
+            <DIV "modal-header"> Header.CONFIRM_REDIRECT_MODAL_TITLEclose
+              <H3 "modal-title"> Header.CONFIRM_REDIRECT_MODAL_TITLE
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <P ""> Stai per abbandonare, perderai i dati selezionati.
+ Vuoi con
+            <DIV "modal-btn"> AnnullaConferma
+              <BUTTON aria="Annulla" "modal-btn btn-dismiss"> Annulla
+              <BUTTON aria="Conferma" "modal-btn btn-confirm"> Conferma
+      <SIMPLE-CONFIRM-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> Confermi la cancellazione dell'account?close Sei sicuro di v
+            <DIV "modal-header"> Confermi la cancellazione dell'account?close
+              <H3 "modal-title"> Confermi la cancellazione dell'account?
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <P ""> Sei sicuro di voler procedere con la cancellazione dell'acco
+            <DIV "modal-btn"> ChiudiConferma
+              <BUTTON aria="Chiudi" "modal-btn btn-dismiss"> Chiudi
+              <BUTTON aria="Conferma" "modal-btn btn-confirm"> Conferma
+      <SIMPLE-CONFIRM-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> Account cancellato con successo Il suo account è stato cance
+            <DIV "modal-header"> Account cancellato con successo
+              <H3 "modal-title"> Account cancellato con successo
+            <P ""> Il suo account è stato cancellato con successo.
+Un email di 
+            <DIV "modal-btn"> Conferma
+              <BUTTON aria="Conferma" "modal-btn btn-confirm"> Conferma
+      <SIMPLE-ERROR-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> error  Errore durante la cancellazione closeSi è verificato 
+            <DIV "modal-header"> error  Errore durante la cancellazione close
+              <DIV "title-wrapper"> error  Errore durante la cancellazione
+                <SPAN "material-symbols-sharp error-icon"> error
+                <H3 "modal-title"> Errore durante la cancellazione
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <P ""> Si è verificato un errore durante la cancellazione dell'acco
+            <DIV "modal-btn"> Continua
+              <BUTTON aria="Continua" "modal-btn btn-confirm"> Continua
+      <SIMPLE-ERROR-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> error  Errore caricamento informazioni utente closeE' stato 
+            <DIV "modal-header"> error  Errore caricamento informazioni utente close
+              <DIV "title-wrapper"> error  Errore caricamento informazioni utente
+                <SPAN "material-symbols-sharp error-icon"> error
+                <H3 "modal-title"> Errore caricamento informazioni utente
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <P ""> E' stato riscontrato un errore durante il caricamento dei tu
+            <DIV "modal-btn"> Continua
+              <BUTTON aria="Continua" "modal-btn btn-confirm"> Continua
+      <LANGUAGE-SELECT-DIALOG ""> 
+        <DIALOG-WRAPPER ""> 
+          <DIALOG#custom-dialog ""> translate Seleziona linguacloseItalianoItalianoEnglishIngles
+            <DIV "modal-header"> translate Seleziona linguaclose
+              <DIV "title-wrapper"> translate Seleziona lingua
+                <SPAN "material-symbols-sharp tkt-icon"> translate
+                <H3 "modal-title"> Seleziona lingua
+              <BUTTON aria="Chiudi" ""> close
+                <SPAN "material-symbols-sharp"> close
+            <DIV#supported-languages ""> ItalianoItalianoEnglishIngleseEspañolSpagnoloFrançaisFrances
+              <FORM "ng-untouched ng-pristine ng-valid"> ItalianoItalianoEnglishIngleseEspañolSpagnoloFrançaisFrances
+                <FIELDSET ""> ItalianoItalianoEnglishIngleseEspañolSpagnoloFrançaisFrances
+                  <LABEL "language-item"> ItalianoItaliano
+                    <INPUT#lang-it "lang-radio ng-untouched ng-pristine ng-valid"> 
+                    <DIV "lang-name-container"> ItalianoItaliano
+                      <SPAN "lang-name"> Italiano
+                      <SPAN "lang-original-name"> Italiano
+                  <LABEL "language-item"> EnglishInglese
+                    <INPUT#lang-en "lang-radio ng-untouched ng-pristine ng-valid"> 
+                    <DIV "lang-name-container"> EnglishInglese
+                      <SPAN "lang-name"> English
+                      <SPAN "lang-original-name"> Inglese
+                  <LABEL "language-item"> EspañolSpagnolo
+                    <INPUT#lang-es "lang-radio ng-untouched ng-pristine ng-valid"> 
+                    <DIV "lang-name-container"> EspañolSpagnolo
+                      <SPAN "lang-name"> Español
+                      <SPAN "lang-original-name"> Spagnolo
+                  <LABEL "language-item"> FrançaisFrancese
+                    <INPUT#lang-fr "lang-radio ng-untouched ng-pristine ng-valid"> 
+                    <DIV "lang-name-container"> FrançaisFrancese
+                      <SPAN "lang-name"> Français
+                      <SPAN "lang-original-name"> Francese
+                  <LABEL "language-item"> عربيةArabo
+                    <INPUT#lang-ar "lang-radio ng-untouched ng-pristine ng-valid"> 
+                    <DIV "lang-name-container"> عربيةArabo
+                      <SPAN "lang-name"> عربية
+                      <SPAN "lang-original-name"> Arabo
+            <DIV "bottom-sect"> Seleziona
+              <BUTTON#select-lang ""> Seleziona
+                <SPAN ""> Seleziona
+    <MAIN ""> Dettagli sul Museo selezionato:Museo selezionato:: Anfiteatr
+      <ROUTER-OUTLET ""> 
+      <APP-BUY-TICKETLESS ""> Dettagli sul Museo selezionato:Museo selezionato:: Anfiteatr
+        <DIV "buy-ticketless-content"> Dettagli sul Museo selezionato:Museo selezionato:: Anfiteatr
+          <MUSEUM-INFO-BANNER ""> Dettagli sul Museo selezionato:Museo selezionato:: Anfiteatr
+            <DIV#info-museum-banner ""> Dettagli sul Museo selezionato:Museo selezionato:: Anfiteatr
+              <DIV "sr-only"> Dettagli sul Museo selezionato:Museo selezionato:: Anfiteatr
+                <P ""> Dettagli sul Museo selezionato:Museo selezionato:: Anfiteatr
+                  <SPAN ""> Dettagli sul Museo selezionato:
+                  <SPAN ""> Museo selezionato:: Anfiteatro campano
+                  <SPAN ""> Stato museo:: Aperto - Chiude alle 20:00
+                    <SPAN ""> Aperto - Chiude alle 20:00
+                      <SPAN ""> Aperto
+                      <SPAN "d-none d-sm-inline"> -
+                      <SPAN "next-opening d-block d-sm-inline"> Chiude alle 20:00
+              <DIV "info-container"> Anfiteatro campano
+schedule
+Aperto - Chiude alle 20:00
+                <DIV "name-hours"> Anfiteatro campano
+schedule
+Aperto - Chiude alle 20:00
+                  <H1 "denom"> Anfiteatro campano
+                  <SPAN "ticket-type"> 
+                  <DIV "hours"> schedule
+Aperto - Chiude alle 20:00
+                    <SPAN "material-symbols-sharp me-2 icon"> schedule
+                    <SPAN ""> Aperto - Chiude alle 20:00
+                      <SPAN ""> Aperto
+                      <SPAN "d-none d-sm-inline"> -
+                      <SPAN "next-opening d-block d-sm-inline"> Chiude alle 20:00
+                <DIV "thumbnail"> 
+                  <IMG "thumbnail-img"> 
+          <DIV "row-md buy-ticket-container"> Lista delle offerte disponibili
+arrow_back
+Torna alle catego
+            <OFFERS-LIST ""> Lista delle offerte disponibili
+arrow_back
+Torna alle catego
+              <DIV "offers-container"> Lista delle offerte disponibili
+arrow_back
+Torna alle catego
+                <H2 "sr-only"> Lista delle offerte disponibili
+                <DIV "return-button pb-3"> arrow_back
+Torna alle categorie
+                  <BUTTON aria="Torna alle categorie" "back-to-action-btn"> arrow_back
+Torna alle categorie
+                    <SPAN "material-symbols-sharp rtl-icon"> arrow_back
+                    <SPAN ""> Torna alle categorie
+                <UL "offers-list row align-items-center"> Domenica al Museo
+Ingresso gratuito ogni prima domenica del 
+                  <LI "col-12 col-md-6"> Domenica al Museo
+Ingresso gratuito ogni prima domenica del 
+                    <CARD-OFFERTA ""> Domenica al Museo
+Ingresso gratuito ogni prima domenica del 
+                      <BUTTON aria="Nome offerta: : Domenica al Museo - Descrizione offerta: : Ingresso gratuito ogni prima domenica del mese.
+      Tipologia biglietto: Biglietto. Clicca per selezionare l'offerta" "btn-wrapper mb-4"> Domenica al Museo
+Ingresso gratuito ogni prima domenica del 
+                        <DIV "card-offer p-3"> Domenica al Museo
+Ingresso gratuito ogni prima domenica del 
+                          <SPAN "offer-title text-start"> Domenica al Museo
+                          <SPAN "offer-desc text-start"> Ingresso gratuito ogni prima domenica del mese
+                          <DETAILS-GENERAL-INFO ""> schedule
+Validità: 1 giorno dalla validazione
+account_balanc
+                            <UL "description-details"> schedule
+Validità: 1 giorno dalla validazione
+account_balanc
+                              <LI aria="Validità: 1 giorno dalla validazione" "description-line"> schedule
+Validità: 1 giorno dalla validazione
+                              <LI aria="Musei coinvolti: 2" "description-line"> account_balance
+Musei coinvolti: 2
+                              <LI aria="Ingressi per museo: 1" "description-line"> confirmation_number
+Ingressi per museo: 1
+                          <DIV "details-btn-container"> DETTAGLI
+arrow_forward
+                            <BUTTON aria="Visualizza dettagli offerta" ""> DETTAGLI
+arrow_forward
+                              <SPAN ""> DETTAGLI
+                              <SPAN "material-symbols-sharp icon rtl-icon"> arrow_forward
+                  <LI "col-12 col-md-6"> Biglietto Anfiteatro 6€
+Valido dal 02/02/2026
+schedule
+Valid
+                    <CARD-OFFERTA ""> Biglietto Anfiteatro 6€
+Valido dal 02/02/2026
+schedule
+Valid
+                      <BUTTON aria="Nome offerta: : Biglietto Anfiteatro 6€ - Descrizione offerta: : Valido dal 02/02/2026.
+      Tipologia biglietto: Biglietto. Clicca per selezionare l'offerta" "btn-wrapper mb-4"> Biglietto Anfiteatro 6€
+Valido dal 02/02/2026
+schedule
+Valid
+                        <DIV "card-offer p-3"> Biglietto Anfiteatro 6€
+Valido dal 02/02/2026
+schedule
+Valid
+                          <SPAN "offer-title text-start"> Biglietto Anfiteatro 6€
+                          <SPAN "offer-desc text-start"> Valido dal 02/02/2026
+                          <DETAILS-GENERAL-INFO ""> schedule
+Validità: 1 giorno dalla validazione
+account_balanc
+                            <UL "description-details"> schedule
+Validità: 1 giorno dalla validazione
+account_balanc
+                              <LI aria="Validità: 1 giorno dalla validazione" "description-line"> schedule
+Validità: 1 giorno dalla validazione
+                              <LI aria="Musei coinvolti: 2" "description-line"> account_balance
+Musei coinvolti: 2
+                              <LI aria="Ingressi per museo: 1" "description-line"> confirmation_number
+Ingressi per museo: 1
+                          <DIV "details-btn-container"> DETTAGLI
+arrow_forward
+                            <BUTTON aria="Visualizza dettagli offerta" ""> DETTAGLI
+arrow_forward
+                              <SPAN ""> DETTAGLI
+                              <SPAN "material-symbols-sharp icon rtl-icon"> arrow_forward
+              <APP-SIMPLE-DETAILS-DIALOG ""> 
+                <DIALOG-WRAPPER "info-dialog"> 
+                  <DIALOG#custom-dialog ""> Pop up modale dettagli aperta info close
+                    <DIV "info-modal"> Pop up modale dettagli aperta info close
+                      <DIV "modal-header"> Pop up modale dettagli aperta info close
+                        <P "sr-only"> Pop up modale dettagli aperta
+                        <DIV "title-wrapper"> info
+                          <SPAN "material-symbols-sharp tkt-icon"> info
+                        <BUTTON aria="Chiudi modale dettagli" ""> close
+                          <SPAN "material-symbols-sharp"> close
+                      <DIV "scrollable"> 
+                        <P "description"> 
+            <DIV ""> 
+              <TICKET-ACTION-BUTTONS ""> 
+                <DIV "action-btns-container pale-grey-background"> 
+                  <DIV "action-btns justify-content-center justify-content-md-start"> 
+        <SIMPLE-ERROR-DIALOG ""> 
+          <DIALOG-WRAPPER ""> 
+            <DIALOG#custom-dialog ""> error  Errore pagamento Il pagamento non e' andato a buon fi
+              <DIV "modal-header"> error  Errore pagamento
+                <DIV "title-wrapper"> error  Errore pagamento
+                  <SPAN "material-symbols-sharp error-icon"> error
+                  <H3 "modal-title"> Errore pagamento
+              <P ""> Il pagamento non e' andato a buon fine.
+              <DIV "modal-btn"> Continua
+                <BUTTON aria="Continua" "modal-btn btn-confirm"> Continua
+        <SIMPLE-CONFIRM-DIALOG ""> 
+          <DIALOG-WRAPPER ""> 
+            <DIALOG#custom-dialog ""> Acquisto completato Ti ringraziamo per l'acquisto.
+Stiamo cr
+              <DIV "modal-header"> Acquisto completato
+                <H3 "modal-title"> Acquisto completato
+              <P ""> Ti ringraziamo per l'acquisto.
+Stiamo creando il tuo bigliet
+              <DIV "modal-btn"> Chiudi
+                <BUTTON aria="Chiudi" "modal-btn btn-confirm"> Chiudi
+    <B2C-FOOTER ""> CONTATTI
+Direzione generale Musei
+via di San Michele, 22
+001
+      <FOOTER "it-footer"> CONTATTI
+Direzione generale Musei
+via di San Michele, 22
+001
+        <DIV "it-footer-main"> CONTATTI
+Direzione generale Musei
+via di San Michele, 22
+001
+          <DIV "container-footer px-4 py-0"> CONTATTI
+Direzione generale Musei
+via di San Michele, 22
+001
+            <SECTION "pt-3 px-2"> 
+              <DIV#b2c-footer-logos ""> 
+                <IMG "footerImg"> 
+                <A aria="MIC Ministero della Cultura - Collegamento a sito esterno - Apertura in nuova scheda" ""> 
+                  <IMG "footerImg"> 
+                <IMG "footerImg"> 
+            <SECTION "mt-4 border-white border-top px-0 pb-4"> CONTATTI
+Direzione generale Musei
+via di San Michele, 22
+001
+              <DIV "row pt-4"> CONTATTI
+                <DIV "col-md-4 pb-md-2"> CONTATTI
+                  <H4 "h5"> CONTATTI
+              <DIV "row"> Direzione generale Musei
+via di San Michele, 22
+00153 - Roma
+                <DIV "col-md-4"> Direzione generale Musei
+via di San Michele, 22
+00153 - Roma
+                  <H5 "h6 sub-title-footer mb-0"> Direzione generale Musei
+                  <UL "footer-list list-unstyled"> via di San Michele, 22
+00153 - Roma
+                    <LI ""> via di San Michele, 22
+                      <SPAN ""> via di San Michele, 22
+                    <LI ""> 00153 - Roma
+                      <SPAN ""> 00153 - Roma
+                <DIV "col-md-4 pt-md-0 p-smn"> Helpdesk biglietti
+mail: info@museiitaliani.it
+Tel: +39 06 8
+                  <H5 "h6 sub-title-footer mb-0"> Helpdesk biglietti
+                  <UL "footer-list list-unstyled"> mail: info@museiitaliani.it
+Tel: +39 06 87570182
+Il servizio
+                    <LI ""> mail: info@museiitaliani.it
+                      <SPAN ""> mail: info@museiitaliani.it
+                    <LI ""> Tel: +39 06 87570182
+                      <SPAN ""> Tel: +39 06 87570182
+                    <LI ""> Il servizio è attivo tutti i giorni dalle 9:00 alle 17:30
+                      <SPAN ""> Il servizio è attivo tutti i giorni dalle 9:00 alle 17:30
+                <DIV "col-md-4 pt-md-0 p-smn"> Seguici su:
+                  <H5 "h6 sub-title-footer"> Seguici su:
+                  <UL "list-inline align-text-start social"> 
+                    <LI "list-inline-item"> 
+                      <A aria="Facebook Ministero della Cultura - Apertura in nuova scheda" "text-white text-decoration-none"> 
+                        <FA-ICON "ng-fa-icon fa-lg"> 
+                          <svg "[object SVGAnimatedString]"> 
+                            <path "[object SVGAnimatedString]"> 
+                    <LI "list-inline-item"> 
+                      <A aria="Twitter Ministero della Cultura - Apertura in nuova scheda" "text-white text-decoration-none"> 
+                        <FA-ICON "ng-fa-icon fa-lg"> 
+                          <svg "[object SVGAnimatedString]"> 
+                            <path "[object SVGAnimatedString]"> 
+                    <LI "list-inline-item"> 
+                      <A aria="Instagram Ministero della Cultura - Apertura in nuova scheda" "text-white text-decoration-none"> 
+                        <FA-ICON "ng-fa-icon fa-lg"> 
+                          <svg "[object SVGAnimatedString]"> 
+                            <path "[object SVGAnimatedString]"> 
+        <DIV "it-footer-small-prints clearfix"> © 2026, Direzione generale Musei
+Dichiarazione di accesibili
+          <DIV "container-footer"> © 2026, Direzione generale Musei
+Dichiarazione di accesibili
+            <UL "it-footer-small-prints-list list-inline mb-0 d-flex flex-column-reverse flex-md-"> © 2026, Direzione generale Musei
+Dichiarazione di accesibili
+              <LI "list-inline-item"> © 2026, Direzione generale Musei
+                <SMALL "mb-0 small font-weight-light"> © 2026, Direzione generale Musei
+              <LI "list-inline-item"> Dichiarazione di accesibilità
+                <A "link-footer"> Dichiarazione di accesibilità
+              <LI "list-inline-item"> Privacy Policy
+                <A "link-footer"> Privacy Policy
+    <LOGIN-REQUEST-DIALOG ""> 
+      <DIALOG-WRAPPER ""> 
+        <DIALOG#custom-dialog ""> La tua sessione è scadutacloseAbbiamo rilevato una sessione 
+          <DIV "modal-header"> La tua sessione è scadutaclose
+            <H3 "modal-title"> La tua sessione è scaduta
+            <BUTTON aria="Chiudi" ""> close
+              <SPAN "material-symbols-sharp"> close
+          <P ""> Abbiamo rilevato una sessione scaduta. Per continuare a usar
+          <DIV "modal-btn-container"> Continua a navigareVai a login
+            <BUTTON "modal-btn keep-browsing"> Continua a navigare
+            <BUTTON "modal-btn go-to-login"> Vai a login
+  <LINK ""> 
+  <LINK ""> 
+  <LINK ""> 
+  <LINK ""> 
+  <LINK ""> 
+  <LINK ""> 
+  <SCRIPT ""> 
+  <SCRIPT ""> 
+  <SCRIPT ""> 
+  <IFRAME ""> 
+  <DIV "acsb-trigger acsb-widget"> 

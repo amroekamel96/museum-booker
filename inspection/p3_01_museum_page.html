@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="it" data-critters-container="" dir="ltr"><head>
+  <meta charset="utf-8">
+  <title>Musei Italiani - Acquista Biglietti</title>
+  <base href="/b2c/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="preload" href="media/MaterialSymbolsSharp-VariableFont_FILL,GRAD,opsz,wght.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="media/TitilliumWeb-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="media/TitilliumWeb-Semibold.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <meta name="description" content="Anfiteatro campano - acquisto biglietti. Orari, tariffe, biglietti, abbonamenti e informazioni.">
+  <meta property="og:title" content="Anfiteatro campano - Portale vendita biglietti">
+  <meta property="og:description" content="Anfiteatro campano - acquisto biglietti. Orari, tariffe, biglietti, abbonamenti e informazioni.">
+  <meta property="og:url" content="https://portale.museiitaliani.it/b2c/buyTicketless/f595b131-5531-4a54-91ac-880d0c054308">
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="https://akamaicdn.museiitaliani.it/museiitaliani-prod/prod/thumbs/2x/d01dd89083ff0ffd0a61a87f68fca7b00fd4d3c7dadc2e8ddba903e8a7fb39dd_2x.jpg?ResponseContentDisposition=inline">
+  <meta property="og:type" content="website">
+
+  <meta property="og:site_name" content="Musei Italiani - Acquista Biglietti">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@museitaliani">
+  <meta name="twitter:title" content="Anfiteatro campano - Portale vendita biglietti">
+  <meta name="twitter:description" content="Anfiteatro campano - acquisto biglietti. Orari, tariffe, biglietti, abbonamenti e informazioni.">
+  <meta name="twitter:image" content="https://akamaicdn.museiitaliani.it/museiitaliani-prod/prod/thumbs/2x/d01dd89083ff0ffd0a61a87f68fca7b00fd4d3c7dadc2e8ddba903e8a7fb39dd_2x.jpg?ResponseContentDisposition=inline">
+  <meta name="twitter:image:alt" content="Italian Museums Logo.">
+
+<style>:root{--bootstrap-italia-version:"2.16.0"}:root{--bs-indigo:hsl(243, 100%, 65%);--bs-purple:hsl(243, 100%, 80%);--bs-pink:hsl(350, 100%, 85%);--bs-red:hsl(350, 60%, 50%);--bs-orange:hsl(36, 100%, 30%);--bs-yellow:hsl(44, 100%, 72.5%);--bs-green:hsl(160, 100%, 25%);--bs-teal:hsl(178, 90%, 32%);--bs-cyan:hsl(178, 100%, 50%);--bs-gray:hsl(0, 0%, 32%);--bs-gray-dark:hsl(0, 0%, 15%);--bs-blue:hsl(210, 100%, 45%);--bs-gray-secondary:hsl(210, 17%, 44%);--bs-gray-tertiary:hsl(205, 21.2121212121%, 44.55%);--bs-gray-quaternary:hsl(238, 100%, 99.5%);--bs-gray-100:hsl(0, 0%, 96%);--bs-gray-200:hsl(0, 0%, 90%);--bs-gray-300:hsl(0, 0%, 83%);--bs-gray-400:hsl(0, 0%, 64%);--bs-gray-500:hsl(0, 0%, 45%);--bs-gray-600:hsl(0, 0%, 32%);--bs-gray-700:hsl(0, 0%, 25%);--bs-gray-800:hsl(0, 0%, 15%);--bs-gray-900:hsl(0, 0%, 10%);--bs-primary:hsl(210, 100%, 40%);--bs-secondary:hsl(210, 17%, 44%);--bs-success:hsl(160, 100%, 25%);--bs-info:hsl(210, 17%, 44%);--bs-warning:hsl(36, 100%, 30%);--bs-danger:hsl(350, 60%, 50%);--bs-light:hsl(255, 32.2033898305%, 92.625%);--bs-dark:hsl(210, 54%, 20%);--bs-black:hsl(0, 0%, 0%);--bs-white:hsl(0, 0%, 100%);--bs-100:hsl(0, 0%, 96%);--bs-200:hsl(0, 0%, 90%);--bs-300:hsl(0, 0%, 83%);--bs-400:hsl(0, 0%, 64%);--bs-500:hsl(0, 0%, 45%);--bs-600:hsl(0, 0%, 32%);--bs-700:hsl(0, 0%, 25%);--bs-800:hsl(0, 0%, 15%);--bs-900:hsl(0, 0%, 10%);--bs-primary-rgb:0, 102, 204;--bs-secondary-rgb:93, 112, 131;--bs-success-rgb:0, 128, 85;--bs-info-rgb:93, 112, 131;--bs-warning-rgb:153, 92, 0;--bs-danger-rgb:204, 51, 77;--bs-light-rgb:233, 230, 242;--bs-dark-rgb:23, 51, 79;--bs-100-rgb:245, 245, 245;--bs-200-rgb:230, 230, 230;--bs-300-rgb:212, 212, 212;--bs-400-rgb:163, 163, 163;--bs-500-rgb:115, 115, 115;--bs-600-rgb:82, 82, 82;--bs-700-rgb:64, 64, 64;--bs-800-rgb:38, 38, 38;--bs-900-rgb:26, 26, 26;--bs-white-rgb:255, 255, 255;--bs-black-rgb:0, 0, 0;--bs-body-color-rgb:26, 26, 26;--bs-body-bg-rgb:255, 255, 255;--bs-font-sans-serif:"Titillium Web", Geneva, Tahoma, sans-serif;--bs-font-monospace:"Roboto Mono", monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:hsl(0, 0%, 10%);--bs-body-bg:hsl(0, 0%, 100%);--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:hsl(210, 4%, 78%);--bs-border-color-translucent:rgba(0, 0, 0, .175);--bs-border-radius:4px;--bs-border-radius-sm:2px;--bs-border-radius-lg:8px;--bs-border-radius-xl:1rem;--bs-border-radius-2xl:2rem;--bs-border-radius-pill:50rem;--bs-link-color:hsl(210, 100%, 40%);--bs-link-hover-color:rgb(0, 81.6, 163.2);--bs-code-color:hsl(210, 54%, 20%);--bs-highlight-bg:hsl(178, 100%, 90%)}*,*:before,*:after{box-sizing:border-box}@media (prefers-reduced-motion: no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}:focus:not([data-focus-mouse=true]){border-color:#000!important;box-shadow:0 0 0 2px #fff,0 0 0 5px #000!important;outline:3px solid rgba(0,0,0,0)!important;outline-offset:3px!important}@font-face{font-display:swap;font-family:Titillium Web;font-style:normal;font-weight:200;src:url("./media/TitilliumWeb-Extralight-K66Y75U4.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:italic;font-weight:200;src:url("./media/TitilliumWeb-Extralightitalic-JUYYTWCA.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:normal;font-weight:300;src:url("./media/TitilliumWeb-Light-B4BBQRKN.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:italic;font-weight:300;src:url("./media/TitilliumWeb-Lightitalic-TNVHDM62.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:normal;font-weight:400;src:url("./media/TitilliumWeb-Regular-3BQKCIPG.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:italic;font-weight:400;src:url("./media/TitilliumWeb-Italic-WGRHPQ45.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:normal;font-weight:600;src:url("./media/TitilliumWeb-Semibold-WCUZUAKO.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:italic;font-weight:600;src:url("./media/TitilliumWeb-Semibolditalic-BE2SOXR3.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:normal;font-weight:700;src:url("./media/TitilliumWeb-Bold-5UWHIXMQ.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:italic;font-weight:700;src:url("./media/TitilliumWeb-Bolditalic-YRT6HIAM.woff2") format("woff2")}@font-face{font-display:swap;font-family:Titillium Web;font-style:normal;font-weight:900;src:url("./media/TitilliumWeb-Black-EN357W25.woff2") format("woff2")}@font-face{font-family:Noto Kufi Arabic;src:url("./media/NotoKufiArabic-VariableFont_wght-JOOVWR5M.woff2") format("woff2-variations");font-weight:100 900;font-style:normal;font-display:swap}*{font-family:Titillium Web,Noto Kufi Arabic}body{background-color:#fafafa!important}</style><link rel="stylesheet" href="styles-TR63O7CK.css" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-TR63O7CK.css"></noscript><script>var disableAI=!1;!function(){var e,i=document.createElement("script"),t=document.body?document.body:document.querySelector("head");function o(){clearInterval(e);var i=document.getElementsByTagName("access-widget-ui")[2],t=i.shadowRoot.querySelector(".profile-motor"),o=i.shadowRoot.querySelector(".profile-blind");o&&(t.remove(),o.remove())}i.src="https://acsbapp.com/apps/app/dist/js/app.js",i.async=!0,i.onload=function(){acsbJS.init({statementLink:"https://form.agid.gov.it/view/75438e60-bf4e-11ee-9245-df695187fdee",footerHtml:"<a href=\"https://www.accessiway.com\"/>AccessiWay. The Web Accessibility Solution</a>",hideMobile:!1,hideTrigger:!1,disableBgProcess:disableAI,language:"it",position:"left",leadColor:"#0069fb",triggerColor:"",triggerRadius:"50%",triggerPositionX:"left",triggerPositionY:"bottom",triggerIcon:"people",triggerSize:"medium",triggerOffsetX:20,triggerOffsetY:20,mobile:{triggerSize:"medium",triggerPositionX:"left",triggerPositionY:"bottom",triggerOffsetX:10,triggerOffsetY:10,triggerRadius:"50%"}})},t.appendChild(i),disableAI&&(e=setInterval(function e(){var i=document.getElementsByTagName("access-widget-ui")[2];i&&i.shadowRoot&&(o(),new MutationObserver(function(e,i){o()}).observe(i.shadowRoot.querySelector(".profiles"),{childList:!0,subtree:!0,attributes:!0}))},500))}();</script><script src="https://acsbapp.com/apps/app/dist/js/app.js" async=""></script><style>main[_ngcontent-ng-c2299527430]{min-height:calc(100vh - 60px)}@media screen and (min-width: 992px){main[_ngcontent-ng-c2299527430]{min-height:76vh;height:auto}}</style><style>.reset-btn-style[_ngcontent-ng-c4234839704]{margin:0;padding:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none}.reset-btn-style[_ngcontent-ng-c4234839704]:focus{outline:none}.header[_ngcontent-ng-c4234839704]{color:#fff;width:100%;height:60px}@media screen and (min-width: 768px){.header[_ngcontent-ng-c4234839704]{height:79px}}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]{background-color:#2d489d;padding:16px}@media screen and (min-width: 1281px){.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704] > *[_ngcontent-ng-c4234839704]{max-width:1240px;margin:0 auto}}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .btn-home[_ngcontent-ng-c4234839704]{margin:0;padding:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .btn-home[_ngcontent-ng-c4234839704]:focus{outline:none}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   #logo-mi-mini[_ngcontent-ng-c4234839704]{width:150px;max-width:150px}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   #logo-musei-ita[_ngcontent-ng-c4234839704]{width:85px;height:47px}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   #logo-musei-ita-business[_ngcontent-ng-c4234839704]{width:52px;height:28px}@media screen and (min-width: 768px){.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   #logo-musei-ita-business[_ngcontent-ng-c4234839704]{width:85px;height:47px}}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]{display:flex;align-items:center;justify-content:space-evenly;gap:24px}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .info-links-item[_ngcontent-ng-c4234839704]   span[_ngcontent-ng-c4234839704]{line-height:24px}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .info-links-item[_ngcontent-ng-c4234839704]   .nav-icon[_ngcontent-ng-c4234839704]{height:24px;width:24px;overflow:hidden}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .info-links-item[_ngcontent-ng-c4234839704]:hover{cursor:pointer}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .scale-on-hover[_ngcontent-ng-c4234839704]:hover{transform:scale(1.02)}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]{display:flex;position:relative;gap:8px;font-weight:600}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]   #drop-down-b2c[_ngcontent-ng-c4234839704]{z-index:1000;width:200px;position:absolute;top:29px;right:-13px;background-color:#fff;color:#000;padding:10px;border-radius:5px;box-shadow:0 2px 20px #00000087}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]   #drop-down-b2c[_ngcontent-ng-c4234839704]   legend[_ngcontent-ng-c4234839704]{width:100%;font-size:1rem;line-height:1.2rem;text-align:center}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]   #drop-down-b2c[_ngcontent-ng-c4234839704]   .drop-down-header[_ngcontent-ng-c4234839704]{position:relative}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]   #drop-down-b2c[_ngcontent-ng-c4234839704]   .drop-down-header[_ngcontent-ng-c4234839704]   span[_ngcontent-ng-c4234839704]{width:20px;height:20px;position:absolute;top:-34px;right:5px;background-color:#fff;transform:rotate(45deg)}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]   #drop-down-b2c[_ngcontent-ng-c4234839704]   .lang-checkbox[_ngcontent-ng-c4234839704]{display:flex;justify-content:space-between}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]   #drop-down-b2c[_ngcontent-ng-c4234839704]   .lang-checkbox[_ngcontent-ng-c4234839704]   label[_ngcontent-ng-c4234839704]{width:100%}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]   #drop-down-b2c[_ngcontent-ng-c4234839704]   .lang-checkbox[_ngcontent-ng-c4234839704]   label[_ngcontent-ng-c4234839704]:hover, .header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .info-links[_ngcontent-ng-c4234839704]   .lang-switch[_ngcontent-ng-c4234839704]   #drop-down-b2c[_ngcontent-ng-c4234839704]   .lang-checkbox[_ngcontent-ng-c4234839704]   .lang-radio[_ngcontent-ng-c4234839704]:hover{cursor:pointer}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .mid-layer-container[_ngcontent-ng-c4234839704]{display:flex;justify-content:space-between;align-items:center}.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   .text-title-header[_ngcontent-ng-c4234839704]{font-size:1.125rem;font-weight:700;line-height:24px;padding-left:20px}@media (min-width: 768px){.header[_ngcontent-ng-c4234839704]   #mid-layer[_ngcontent-ng-c4234839704]   #logo-mi-mini[_ngcontent-ng-c4234839704]{width:200px;max-width:200px}}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]{color:#000;padding:0 25px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   .nav-controls[_ngcontent-ng-c4234839704]{padding:10px 0}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   .nav-controls[_ngcontent-ng-c4234839704] > span[_ngcontent-ng-c4234839704]{font-weight:700;font-size:18px;margin-left:15px;text-transform:uppercase}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   .nav-controls[_ngcontent-ng-c4234839704] > span[_ngcontent-ng-c4234839704]:hover{cursor:pointer;text-decoration:underline;color:#2d489d}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   .nav-controls[_ngcontent-ng-c4234839704]   .toggle-sidebar-btn[_ngcontent-ng-c4234839704]{padding:0 10px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   .nav-controls[_ngcontent-ng-c4234839704]   .toggle-sidebar-btn[_ngcontent-ng-c4234839704]   fa-icon[_ngcontent-ng-c4234839704]{font-size:1.3rem}@media screen and (min-width: 768px){.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   .nav-controls[_ngcontent-ng-c4234839704]{display:flex;align-content:center;align-items:center;justify-content:flex-start}}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]{z-index:100;height:100%;width:85%;position:fixed;top:0;right:-1px;transform:translate(100%);transition:transform .3s ease-out;background-color:#fafafa;overflow:hidden}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-body[_ngcontent-ng-c4234839704]{display:flex;flex-direction:column;height:calc(100dvh - 68px)}@media screen and (min-width: 768px){.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-body[_ngcontent-ng-c4234839704]{height:calc(100dvh - 68px)}}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-header[_ngcontent-ng-c4234839704]{background-color:#fff;padding:14px 16px;text-align:center;box-shadow:0 1px 1px #00000026;height:68px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-header[_ngcontent-ng-c4234839704] > h2[_ngcontent-ng-c4234839704]{font-size:1.375rem;margin-bottom:0;font-weight:600}@media screen and (min-width: 768px){.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-header[_ngcontent-ng-c4234839704]{height:75px}}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-welcome[_ngcontent-ng-c4234839704]{padding:16px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-welcome[_ngcontent-ng-c4234839704] > span[_ngcontent-ng-c4234839704]{font-size:1.5rem;font-weight:600;line-height:32px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704]{margin:0;padding:8px 16px 16px;flex-grow:1;overflow-y:auto}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704] > legend[_ngcontent-ng-c4234839704]{font-size:.875rem;font-style:normal;font-weight:600}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704]   li[_ngcontent-ng-c4234839704]{list-style-type:none}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704]   .side-menu-item[_ngcontent-ng-c4234839704]{text-align:start;margin-bottom:24px;display:flex;justify-content:space-between}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704]   .side-menu-item[_ngcontent-ng-c4234839704] > div[_ngcontent-ng-c4234839704]{display:flex;gap:10px;align-items:center}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704]   .side-menu-item[_ngcontent-ng-c4234839704] > div[_ngcontent-ng-c4234839704]   .material-symbols-sharp[_ngcontent-ng-c4234839704]{font-size:24px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704]   .side-menu-item[_ngcontent-ng-c4234839704] > div[_ngcontent-ng-c4234839704] > span[_ngcontent-ng-c4234839704]{font-size:1rem;font-weight:400}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704]   .side-menu-item[_ngcontent-ng-c4234839704]:active{color:#2d489d}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-item-list[_ngcontent-ng-c4234839704]   .side-menu-item[_ngcontent-ng-c4234839704]:hover{cursor:pointer;color:#2d489d}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]{padding:16px;width:100%}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]{border-top:1px solid #BBBCBC;padding-top:12px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .logged-user-section[_ngcontent-ng-c4234839704]{display:flex;flex-direction:column;align-items:center}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .logged-user-section[_ngcontent-ng-c4234839704]   .logout-sidebar[_ngcontent-ng-c4234839704]{width:100%;margin-bottom:12px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .logged-user-section[_ngcontent-ng-c4234839704]   .delete-account[_ngcontent-ng-c4234839704]{color:#cc334d}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .logged-user-section[_ngcontent-ng-c4234839704]   .logout-sidebar[_ngcontent-ng-c4234839704]:hover, .header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .logged-user-section[_ngcontent-ng-c4234839704]   .delete-account[_ngcontent-ng-c4234839704]:hover{cursor:pointer}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .non-logged-user-section[_ngcontent-ng-c4234839704]{display:flex;flex-direction:column;align-items:center}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .non-logged-user-section[_ngcontent-ng-c4234839704]   .footer-title[_ngcontent-ng-c4234839704]{font-size:1.125rem;font-weight:700;margin-bottom:8px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .non-logged-user-section[_ngcontent-ng-c4234839704]   .footer-message[_ngcontent-ng-c4234839704]{font-size:1rem;font-weight:400;margin-bottom:24px}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #side-menu[_ngcontent-ng-c4234839704]   .side-menu-footer[_ngcontent-ng-c4234839704]   .footer-content[_ngcontent-ng-c4234839704]   .non-logged-user-section[_ngcontent-ng-c4234839704]   button[_ngcontent-ng-c4234839704]{display:flex;height:48px;padding:12px 16px;justify-content:center;align-items:center;gap:8px;box-shadow:0 0 4px #0000002e;width:100%;border:1px solid #2D489D;border-radius:4px;background:#2d489d;color:#fff;font-size:1rem;font-weight:600}.header[_ngcontent-ng-c4234839704]   #b2c-navbar[_ngcontent-ng-c4234839704]   #burger-menu[_ngcontent-ng-c4234839704]   #overlay[_ngcontent-ng-c4234839704]{width:100%;height:200%;position:absolute;top:0;left:0;background-color:#00000060;z-index:99}.header[_ngcontent-ng-c4234839704]   .sidebar-open[_ngcontent-ng-c4234839704]{transform:translate(-100%);animation:_ngcontent-ng-c4234839704_open-side-menu-ltr .3s forwards;overflow:hidden;box-shadow:1px 1px 20px #00000069}.header[_ngcontent-ng-c4234839704]   .sidebar-close[_ngcontent-ng-c4234839704]{transform:translate(100%);animation:_ngcontent-ng-c4234839704_close-side-menu-ltr .3s forwards;box-shadow:none}.header[_ngcontent-ng-c4234839704]   .lang-drop-down-close[_ngcontent-ng-c4234839704]{display:none}.header[_ngcontent-ng-c4234839704]   .lang-drop-down-open[_ngcontent-ng-c4234839704]{display:block}.header[_ngcontent-ng-c4234839704]   .separator[_ngcontent-ng-c4234839704]{display:block;width:100%;height:1px;background-color:#000}.header[_ngcontent-ng-c4234839704]   .separator-sidebar[_ngcontent-ng-c4234839704]{display:block;width:95%;height:1px;background-color:#000}#lang-drop-overlay[_ngcontent-ng-c4234839704]{height:100ch;width:100%;position:absolute;top:0;background-color:#00000060;right:0;z-index:99}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]{border:none;border-radius:4px;padding:32px;box-shadow:0 8px 16px #00000026}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]   .modal-header[_ngcontent-ng-c4234839704]{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]   .modal-header[_ngcontent-ng-c4234839704]   h3[_ngcontent-ng-c4234839704]{color:#1a1a1a;font-size:1.125rem;font-weight:600;line-height:24px;margin-bottom:0}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]   p[_ngcontent-ng-c4234839704]{margin-bottom:22px;color:#4c4c4c;font-size:1rem;font-weight:400;white-space:pre-line}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]   .modal-btn[_ngcontent-ng-c4234839704]{display:flex;justify-content:center;flex-grow:1;gap:8px}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]   .modal-btn[_ngcontent-ng-c4234839704]   .modal-btn[_ngcontent-ng-c4234839704]{border-radius:4px;font-size:.875rem;display:flex;padding:12px 24px;justify-content:center;align-items:center}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]   .modal-btn[_ngcontent-ng-c4234839704]   .btn-confirm[_ngcontent-ng-c4234839704]{border:none;background-color:#2d489d;color:#fff}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]   .modal-btn[_ngcontent-ng-c4234839704]   .btn-dismiss[_ngcontent-ng-c4234839704]{background-color:transparent;border:1px solid #2D489D;color:#2d489d}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]::backdrop{background-color:#4b4b4b70}#confirm-redirect-dialog[_ngcontent-ng-c4234839704]:focus, #confirm-redirect-dialog[_ngcontent-ng-c4234839704]:focus-visible{border:2px solid black;box-shadow:none!important;outline:none!important}.modal-btn.btn-confirm[_ngcontent-ng-c4234839704]:focus, .modal-btn.btn-confirm[_ngcontent-ng-c4234839704]:focus-visible{border:none!important;box-shadow:none!important;outline:none!important}.modal-btn.btn-dismiss[_ngcontent-ng-c4234839704]:focus, .modal-btn.btn-dismiss[_ngcontent-ng-c4234839704]:focus-visible{border-color:#2d489d!important;box-shadow:none!important;outline:none!important}@media screen and (min-width: 768px){#side-menu[_ngcontent-ng-c4234839704]{width:30%;max-width:300px}}@keyframes _ngcontent-ng-c4234839704_open-side-menu-ltr{0%{transform:translate(100%)}to{transform:translate(0)}}@keyframes _ngcontent-ng-c4234839704_close-side-menu-ltr{0%{transform:translate(0)}to{transform:translate(100%)}}@keyframes _ngcontent-ng-c4234839704_open-side-menu-rtl{0%{transform:translate(-100%)}to{transform:translate(0)}}@keyframes _ngcontent-ng-c4234839704_close-side-menu-rtl{0%{transform:translate(0)}to{transform:translate(-100%)}}</style><style>.it-footer[_ngcontent-ng-c1478093417]{color:#fff}.it-footer[_ngcontent-ng-c1478093417]   .it-footer-main[_ngcontent-ng-c1478093417]{background-color:#2d489d}.it-footer[_ngcontent-ng-c1478093417]   .it-footer-small-prints[_ngcontent-ng-c1478093417]{background-color:#192857}.it-footer[_ngcontent-ng-c1478093417]   .logo-wrapper[_ngcontent-ng-c1478093417]{padding:0}.it-footer[_ngcontent-ng-c1478093417]   .logo-wrapper[_ngcontent-ng-c1478093417]   .imgFooter[_ngcontent-ng-c1478093417]{width:55%;aspect-ratio:25/9;object-fit:contain;max-width:200px}@media screen and (min-width: 768px){.it-footer[_ngcontent-ng-c1478093417]   .logo-wrapper[_ngcontent-ng-c1478093417]   .imgFooter[_ngcontent-ng-c1478093417]{width:40%}}@media screen and (min-width: 992px){.it-footer[_ngcontent-ng-c1478093417]   .logo-wrapper[_ngcontent-ng-c1478093417]   .imgFooter[_ngcontent-ng-c1478093417]{width:55%}}.it-footer[_ngcontent-ng-c1478093417]   #group-payment-footer-logos[_ngcontent-ng-c1478093417]{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:center;justify-content:center;text-align:center;padding:0}.it-footer[_ngcontent-ng-c1478093417]   #group-payment-footer-logos[_ngcontent-ng-c1478093417]   img[_ngcontent-ng-c1478093417]{width:100%;max-width:180px;max-height:72px;height:auto;object-fit:contain;display:block;margin:0 auto}.it-footer[_ngcontent-ng-c1478093417]   #group-payment-footer-logos[_ngcontent-ng-c1478093417]   a[_ngcontent-ng-c1478093417]{display:flex;justify-content:center}.it-footer[_ngcontent-ng-c1478093417]   #b2c-footer-logos[_ngcontent-ng-c1478093417]{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:center;justify-content:center;text-align:center;padding:0}.it-footer[_ngcontent-ng-c1478093417]   #b2c-footer-logos[_ngcontent-ng-c1478093417]   img[_ngcontent-ng-c1478093417]{width:100%;max-width:200px;max-height:72px;height:auto;object-fit:contain;display:block;margin:0 auto}.it-footer[_ngcontent-ng-c1478093417]   #b2c-footer-logos[_ngcontent-ng-c1478093417]   a[_ngcontent-ng-c1478093417]{display:flex;justify-content:center}@media (max-width: 768px){.it-footer[_ngcontent-ng-c1478093417]   #group-payment-footer-logos[_ngcontent-ng-c1478093417]{grid-template-columns:repeat(2,1fr)}}@media (max-width: 480px){.it-footer[_ngcontent-ng-c1478093417]   #group-payment-footer-logos[_ngcontent-ng-c1478093417], .it-footer[_ngcontent-ng-c1478093417]   #b2c-footer-logos[_ngcontent-ng-c1478093417]{grid-template-columns:repeat(1,1fr)}}.it-footer[_ngcontent-ng-c1478093417]   .sub-title-footer[_ngcontent-ng-c1478093417]{font-weight:700}.it-footer[_ngcontent-ng-c1478093417]   .link-footer[_ngcontent-ng-c1478093417]:hover{text-decoration:underline}@media screen and (min-width: 1281px){.it-footer[_ngcontent-ng-c1478093417]   .container-footer[_ngcontent-ng-c1478093417]{max-width:1240px;margin:0 auto}}.align-text-start[_ngcontent-ng-c1478093417]{text-align:start}ul[_ngcontent-ng-c1478093417]{padding:0}</style><style>.modal-header[_ngcontent-ng-c3547136316]{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.modal-header[_ngcontent-ng-c3547136316]   h3[_ngcontent-ng-c3547136316]{color:#1a1a1a;font-size:1.125rem;font-weight:600;line-height:24px;margin-bottom:0}.modal-header[_ngcontent-ng-c3547136316]   button[_ngcontent-ng-c3547136316]{margin:0;padding:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none;width:24px;height:24px}.modal-header[_ngcontent-ng-c3547136316]   button[_ngcontent-ng-c3547136316]:focus{outline:none}p[_ngcontent-ng-c3547136316]{margin-bottom:22px;color:#4c4c4c;font-size:1rem;font-weight:400;white-space:pre-line}.modal-btn-container[_ngcontent-ng-c3547136316]{display:flex;justify-content:center;flex-grow:1;gap:8px;flex-wrap:wrap}.modal-btn-container[_ngcontent-ng-c3547136316]   .modal-btn[_ngcontent-ng-c3547136316]{border-radius:4px;font-size:1rem;display:flex;padding:12px 24px;justify-content:center;align-items:center}.modal-btn-container[_ngcontent-ng-c3547136316]   .btn-confirm[_ngcontent-ng-c3547136316]{border:none;background-color:#2d489d;color:#fff}.modal-btn-container[_ngcontent-ng-c3547136316]   .btn-dismiss[_ngcontent-ng-c3547136316]{background-color:transparent;border:1px solid #2D489D;color:#2d489d}.modal-btn[_ngcontent-ng-c3547136316]{border:none;font-weight:600;flex-grow:1}.go-to-login[_ngcontent-ng-c3547136316]{background-color:#2d489d;color:#fff}.keep-browsing[_ngcontent-ng-c3547136316]{background-color:#dfe5f6;color:#2d489d}</style><style>.modal-header[_ngcontent-ng-c774412820]{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.modal-header[_ngcontent-ng-c774412820]   h3[_ngcontent-ng-c774412820]{color:#1a1a1a;font-size:1.125rem;font-weight:600;line-height:24px;margin-bottom:0}.modal-header[_ngcontent-ng-c774412820]   button[_ngcontent-ng-c774412820]{margin:0;padding:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none;width:24px;height:24px}.modal-header[_ngcontent-ng-c774412820]   button[_ngcontent-ng-c774412820]:focus{outline:none}p[_ngcontent-ng-c774412820]{margin-bottom:22px;color:#4c4c4c;font-size:1rem;font-weight:400;white-space:pre-line}.modal-btn[_ngcontent-ng-c774412820]{display:flex;justify-content:center;flex-grow:1;gap:8px}.modal-btn[_ngcontent-ng-c774412820]   .modal-btn[_ngcontent-ng-c774412820]{border-radius:4px;font-size:1rem;display:flex;padding:12px 24px;justify-content:center;align-items:center}.modal-btn[_ngcontent-ng-c774412820]   .btn-confirm[_ngcontent-ng-c774412820]{border:none;background-color:#2d489d;color:#fff}.modal-btn[_ngcontent-ng-c774412820]   .btn-dismiss[_ngcontent-ng-c774412820]{background-color:transparent;border:1px solid #2D489D;color:#2d489d}.confirm-loading[_ngcontent-ng-c774412820]{background:#2d489d;color:#1a1a1a94!important;font-weight:600;background-image:linear-gradient(to right,#eee 8%,#ddd 18%,#eee 33%);background-size:1000px 104px;animation-duration:1s;animation-fill-mode:forwards;animation-iteration-count:infinite;animation-name:_ngcontent-ng-c774412820_shimmer;animation-timing-function:linear}@keyframes _ngcontent-ng-c774412820_shimmer{0%{background-position:-468px 0}to{background-position:468px 0}}.recaptcha-terms[_ngcontent-ng-c774412820]{margin-top:1rem;font-size:.75rem;color:#8f8f8f}</style><style>.modal-header[_ngcontent-ng-c1040868794]{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.modal-header[_ngcontent-ng-c1040868794]   .title-wrapper[_ngcontent-ng-c1040868794]{display:flex;align-items:center;gap:5px}.modal-header[_ngcontent-ng-c1040868794]   .title-wrapper[_ngcontent-ng-c1040868794]   .error-icon[_ngcontent-ng-c1040868794]{color:#cc334d;font-size:1.563rem}.modal-header[_ngcontent-ng-c1040868794]   .title-wrapper[_ngcontent-ng-c1040868794]   h3[_ngcontent-ng-c1040868794]{color:#1a1a1a;font-size:1.125rem;font-weight:600;line-height:24px;margin-bottom:0}.modal-header[_ngcontent-ng-c1040868794]   button[_ngcontent-ng-c1040868794]{margin:0;padding:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none;width:24px;height:24px}.modal-header[_ngcontent-ng-c1040868794]   button[_ngcontent-ng-c1040868794]:focus{outline:none}p[_ngcontent-ng-c1040868794]{margin-bottom:22px;color:#4c4c4c;font-size:1rem;font-weight:400;white-space:pre-line}.modal-btn[_ngcontent-ng-c1040868794]{display:flex;justify-content:center;flex-grow:1;gap:8px}.modal-btn[_ngcontent-ng-c1040868794]   .modal-btn[_ngcontent-ng-c1040868794]{border-radius:4px;font-size:1rem;display:flex;padding:12px 24px;justify-content:center;align-items:center}.modal-btn[_ngcontent-ng-c1040868794]   .btn-confirm[_ngcontent-ng-c1040868794]{border:none;background-color:#2d489d;color:#fff}.modal-btn[_ngcontent-ng-c1040868794]   .btn-dismiss[_ngcontent-ng-c1040868794]{background-color:transparent;border:1px solid #2D489D;color:#2d489d}</style><style>.modal-header[_ngcontent-ng-c144520261]{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.modal-header[_ngcontent-ng-c144520261]   .title-wrapper[_ngcontent-ng-c144520261]{display:flex;align-items:center;gap:5px}.modal-header[_ngcontent-ng-c144520261]   .title-wrapper[_ngcontent-ng-c144520261]   .tkt-icon[_ngcontent-ng-c144520261]{color:#2d489d;font-size:1.563rem}.modal-header[_ngcontent-ng-c144520261]   .title-wrapper[_ngcontent-ng-c144520261]   h3[_ngcontent-ng-c144520261]{color:#1a1a1a;font-size:1.125rem;font-weight:600;line-height:24px;margin-bottom:0}.modal-header[_ngcontent-ng-c144520261]   button[_ngcontent-ng-c144520261]{margin:0;padding:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none;width:24px;height:24px}.modal-header[_ngcontent-ng-c144520261]   button[_ngcontent-ng-c144520261]:focus{outline:none}.bottom-sect[_ngcontent-ng-c144520261]{display:flex;justify-content:center}.bottom-sect[_ngcontent-ng-c144520261]   #select-lang[_ngcontent-ng-c144520261]{display:flex;height:48px;padding:12px 16px;justify-content:center;align-items:center;gap:8px;box-shadow:0 0 4px #0000002e;width:100%;border:2px solid #2D489D;border-radius:4px;background:#2d489d;color:#fff;flex:.5;min-width:165px}.bottom-sect[_ngcontent-ng-c144520261]   #select-lang[_ngcontent-ng-c144520261]   span[_ngcontent-ng-c144520261]{font-size:1rem;font-weight:700}.bottom-sect[_ngcontent-ng-c144520261]   #select-lang[_ngcontent-ng-c144520261]:disabled{border:2px solid #8F8F8F;background-color:#fafafa80;color:#8f8f8f}.language-item[_ngcontent-ng-c144520261]{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #BBB;border-radius:5px;margin-bottom:12px}.language-item[_ngcontent-ng-c144520261]:hover{cursor:pointer}.language-item[_ngcontent-ng-c144520261]   .lang-radio[_ngcontent-ng-c144520261]{width:25px;height:25px;border-radius:25px}.language-item[_ngcontent-ng-c144520261]   .lang-radio[_ngcontent-ng-c144520261]:focus{box-shadow:0 0 0 2px #fff,0 0 0 3px #2d489d!important}.language-item[_ngcontent-ng-c144520261]   .lang-name-container[_ngcontent-ng-c144520261]{display:flex;flex-direction:column;gap:5px}.language-item[_ngcontent-ng-c144520261]   .lang-name-container[_ngcontent-ng-c144520261]   .lang-name[_ngcontent-ng-c144520261]{font-size:1.125rem;line-height:1.125rem;font-weight:700}.language-item[_ngcontent-ng-c144520261]   .lang-name-container[_ngcontent-ng-c144520261]   .lang-original-name[_ngcontent-ng-c144520261]{font-size:.75rem;line-height:.75rem}.selected[_ngcontent-ng-c144520261]{border:1px solid #5f7ad1;box-shadow:0 0 4px #5f7ad1}</style><style>#custom-dialog[_ngcontent-ng-c2412294985]{border:none;border-radius:4px;padding:22px;box-shadow:0 8px 16px #00000026}@media screen and (max-width: 992px){#custom-dialog[_ngcontent-ng-c2412294985]{min-width:90%}}@media screen and (min-width: 992px){#custom-dialog[_ngcontent-ng-c2412294985]{width:450px;max-height:900px;padding:32px}}#custom-dialog[_ngcontent-ng-c2412294985]::backdrop{background-color:#4b4b4b70}#custom-dialog.blur-bd[_ngcontent-ng-c2412294985]::backdrop{-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}#custom-dialog[_ngcontent-ng-c2412294985]:focus, #custom-dialog[_ngcontent-ng-c2412294985]:focus-visible{border:none;box-shadow:0 8px 16px #00000026!important;outline:none!important}</style><meta name="description" content="Portale unico musei italiani acquisto biglietti. Orari, tariffe, biglietti, abbonamenti e informazioni."><meta name="robots" content="index, follow, noarchive"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="theme-color" content="#FAFAFA"><meta property="og:title" content="Musei Italiani - Portale nazionale vendita biglietti musei italiani"><meta property="og:description" content="Portale unico musei italiani acquisto biglietti. Orari, tariffe, biglietti, abbonamenti e informazioni."><meta property="og:url" content="https://portale.museiitaliani.it/b2c/buyTicketless/f595b131-5531-4a54-91ac-880d0c054308"><meta property="og:image" content="https://portale.museiitaliani.it/b2c/assets/images/logo-musei-italiani-header.webp"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Musei Italiani - Portale nazionale vendita biglietti musei italiani"><meta name="twitter:description" content="Portale unico musei italiani acquisto biglietti. Orari, tariffe, biglietti, abbonamenti e informazioni."><meta name="twitter:image" content="https://portale.museiitaliani.it/b2c/assets/images/logo-musei-italiani-header.webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","address":{"@type":"PostalAddress","addressLocality":"Roma","postalCode":"00153","streetAddress":"via di San Michele, 22"},"url":"https://museiitaliani.it/","email":"mail: info@museiitaliani.it","name":"Direzione generale Musei","logo":"https://akamaicdn.museiitaliani.it/museiitaliani-prod/public/img/seo/meta-img.webp"}</script><style>.buy-ticketless-content[_ngcontent-ng-c110650983]{background-color:#fafafa;margin:0 auto;min-height:calc(100vh - 60px);display:flex;flex-direction:column}@media screen and (min-width: 768px){.buy-ticketless-content[_ngcontent-ng-c110650983]{min-height:calc(100vh - 79px)}}.buy-ticket-container[_ngcontent-ng-c110650983]{flex-grow:1;display:flex;flex-direction:column;justify-content:space-between;width:100%;margin:0 auto}@media screen and (min-width: 992px){.buy-ticket-container[_ngcontent-ng-c110650983]{min-height:76vh;height:auto}}@media screen and (min-width: 1281px){.buy-ticket-container[_ngcontent-ng-c110650983]{max-width:1240px;flex-direction:column}}</style><style>#info-museum-banner[_ngcontent-ng-c1554334661]{background-color:#2d489d;position:sticky;z-index:98;top:0}@media screen and (min-width: 1281px){#info-museum-banner[_ngcontent-ng-c1554334661] > *[_ngcontent-ng-c1554334661]{max-width:1240px;margin:0 auto}}#info-museum-banner[_ngcontent-ng-c1554334661]   .info-container[_ngcontent-ng-c1554334661]{color:#fff;display:flex;justify-content:space-between;align-items:center;padding:16px}#info-museum-banner[_ngcontent-ng-c1554334661]   .info-container[_ngcontent-ng-c1554334661]   .name-hours[_ngcontent-ng-c1554334661]{display:flex;flex-direction:column;color:#fff;padding-right:8px}#info-museum-banner[_ngcontent-ng-c1554334661]   .info-container[_ngcontent-ng-c1554334661]   .name-hours[_ngcontent-ng-c1554334661]   .denom[_ngcontent-ng-c1554334661]{font-size:1.125rem;font-weight:600;line-height:24px;min-height:24px}#info-museum-banner[_ngcontent-ng-c1554334661]   .info-container[_ngcontent-ng-c1554334661]   .name-hours[_ngcontent-ng-c1554334661]   .hours[_ngcontent-ng-c1554334661]{display:flex;align-items:center;margin-bottom:0;font-size:1rem;font-weight:600;line-height:16px}#info-museum-banner[_ngcontent-ng-c1554334661]   .info-container[_ngcontent-ng-c1554334661]   .name-hours[_ngcontent-ng-c1554334661]   .hours[_ngcontent-ng-c1554334661]   .icon[_ngcontent-ng-c1554334661]{width:24px;height:24px;overflow:hidden}#info-museum-banner[_ngcontent-ng-c1554334661]   .info-container[_ngcontent-ng-c1554334661]   .name-hours[_ngcontent-ng-c1554334661]   .hours[_ngcontent-ng-c1554334661]   .next-opening[_ngcontent-ng-c1554334661]{font-weight:300}.thumbnail[_ngcontent-ng-c1554334661]{box-sizing:border-box;width:64px;height:64px;border:3px solid white;border-radius:5%;overflow:hidden;flex-shrink:0}.thumbnail[_ngcontent-ng-c1554334661]   .thumbnail-img[_ngcontent-ng-c1554334661]{width:100%;height:100%;object-fit:cover;object-position:center}.placeholder[_ngcontent-ng-c1554334661]{box-sizing:border-box;width:100%;height:100%;background-color:#fff;display:flex;justify-content:center;align-items:center}.placeholder[_ngcontent-ng-c1554334661]   span[_ngcontent-ng-c1554334661]{color:#000}#selected-offer-info-container[_ngcontent-ng-c1554334661]{padding:16px;display:flex;flex-direction:column}#selected-offer-info-container[_ngcontent-ng-c1554334661]   .top-section[_ngcontent-ng-c1554334661]{display:flex;justify-content:space-between}#selected-offer-info-container[_ngcontent-ng-c1554334661]   .top-section[_ngcontent-ng-c1554334661]   .info-offerta[_ngcontent-ng-c1554334661]   span[_ngcontent-ng-c1554334661], #selected-offer-info-container[_ngcontent-ng-c1554334661]   .top-section[_ngcontent-ng-c1554334661]   .info-offerta[_ngcontent-ng-c1554334661]   h1[_ngcontent-ng-c1554334661]{display:block;font-size:1.125rem;line-height:24px}#selected-offer-info-container[_ngcontent-ng-c1554334661]   .top-section[_ngcontent-ng-c1554334661]   .info-offerta[_ngcontent-ng-c1554334661]   h1[_ngcontent-ng-c1554334661]{color:#fff;font-weight:600}#selected-offer-info-container[_ngcontent-ng-c1554334661]   .top-section[_ngcontent-ng-c1554334661]   .info-offerta[_ngcontent-ng-c1554334661]   span[_ngcontent-ng-c1554334661]{color:#fafafa;font-weight:400;white-space:pre-line}#selected-offer-info-container[_ngcontent-ng-c1554334661]   .bottom-section[_ngcontent-ng-c1554334661]{margin-top:12px;display:flex;gap:10px}#selected-offer-info-container[_ngcontent-ng-c1554334661]   .bottom-section[_ngcontent-ng-c1554334661]   .badge[_ngcontent-ng-c1554334661]{display:flex;padding:4px 16px;justify-content:center;align-items:center;gap:10px;border-radius:4px;background:#dfe5f6;color:#1a1a1a}#selected-offer-info-container[_ngcontent-ng-c1554334661]   .bottom-section[_ngcontent-ng-c1554334661]   .badge.placeholder[_ngcontent-ng-c1554334661]{visibility:hidden;pointer-events:none;width:1px}.denom-loading[_ngcontent-ng-c1554334661]{border-radius:4px;background:#2d489d;color:transparent!important;font-weight:600;background-image:linear-gradient(to right,#2d489d 8%,#385ac5 18%,#2d489d 33%);background-size:1000px 104px;animation-duration:1s;animation-fill-mode:forwards;animation-iteration-count:infinite;animation-name:_ngcontent-ng-c1554334661_shimmer;animation-timing-function:linear}@keyframes _ngcontent-ng-c1554334661_shimmer{0%{background-position:-468px 0}to{background-position:468px 0}}</style><style>.purchase-selector-container[_ngcontent-ng-c796076758]{min-height:600px;padding:16px;display:flex;flex-direction:column;justify-content:center}.purchase-selector-container[_ngcontent-ng-c796076758]   .ticket-choice-cards[_ngcontent-ng-c796076758]{display:flex;flex-direction:column;justify-content:center}.purchase-selector-container[_ngcontent-ng-c796076758]   .skeleton-flex[_ngcontent-ng-c796076758]{align-items:center}.purchase-selector-container[_ngcontent-ng-c796076758]   .visitors-info-container[_ngcontent-ng-c796076758]{display:flex;justify-content:center;width:100%}.purchase-selector-container[_ngcontent-ng-c796076758]   .visitors-info-container[_ngcontent-ng-c796076758]   .visitors-info[_ngcontent-ng-c796076758]{margin:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none;width:360px;max-width:770px;background-color:#dfe5f6;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-radius:4px;position:relative}.purchase-selector-container[_ngcontent-ng-c796076758]   .visitors-info-container[_ngcontent-ng-c796076758]   .visitors-info[_ngcontent-ng-c796076758]:focus{outline:none}.purchase-selector-container[_ngcontent-ng-c796076758]   .visitors-info-container[_ngcontent-ng-c796076758]   .visitors-info[_ngcontent-ng-c796076758]   .visitors-info-title[_ngcontent-ng-c796076758]{color:#2d489d;font-size:1.375rem;font-weight:700}.purchase-selector-container[_ngcontent-ng-c796076758]   .visitors-info-container[_ngcontent-ng-c796076758]   .visitors-info[_ngcontent-ng-c796076758]   .img-container[_ngcontent-ng-c796076758]   .visitors-info-img[_ngcontent-ng-c796076758]{width:50px;height:50px}.purchase-selector-container[_ngcontent-ng-c796076758]   .visitors-info-container[_ngcontent-ng-c796076758]   .short-banner[_ngcontent-ng-c796076758]{width:360px!important}@media screen and (min-width: 992px){.purchase-selector-container[_ngcontent-ng-c796076758]   .purchase-selector-container[_ngcontent-ng-c796076758]{height:76vh}.purchase-selector-container[_ngcontent-ng-c796076758]   .ticket-choice-cards[_ngcontent-ng-c796076758]{flex-direction:row;justify-content:center;gap:50px;align-items:center}.purchase-selector-container[_ngcontent-ng-c796076758]   .visitors-info[_ngcontent-ng-c796076758]{width:100%!important}}@media screen and (min-width: 1281px){.purchase-selector-container[_ngcontent-ng-c796076758]{max-width:1240px}}</style><style>.info-modal[_ngcontent-ng-c3825108355]{height:80vh;display:flex;flex-direction:column}.modal-header[_ngcontent-ng-c3825108355]{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;gap:20px}.modal-header[_ngcontent-ng-c3825108355]   .title-wrapper[_ngcontent-ng-c3825108355]{display:flex;align-items:center;gap:5px}.modal-header[_ngcontent-ng-c3825108355]   .title-wrapper[_ngcontent-ng-c3825108355]   .tkt-icon[_ngcontent-ng-c3825108355]{color:#2d489d;font-size:1.563rem}.modal-header[_ngcontent-ng-c3825108355]   .title-wrapper[_ngcontent-ng-c3825108355]   h3[_ngcontent-ng-c3825108355]{color:#1a1a1a;font-size:1.125rem;font-weight:600;line-height:24px;margin-bottom:0}.modal-header[_ngcontent-ng-c3825108355]   button[_ngcontent-ng-c3825108355]{margin:0;padding:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none;width:24px;height:24px}.modal-header[_ngcontent-ng-c3825108355]   button[_ngcontent-ng-c3825108355]:focus{outline:none}.scrollable[_ngcontent-ng-c3825108355]{overflow-y:auto;flex-grow:1}.scrollable[_ngcontent-ng-c3825108355]   .description[_ngcontent-ng-c3825108355]{margin-bottom:22px;color:#4c4c4c;font-size:1rem;font-weight:400;white-space:pre-line}.btn-wrapper[_ngcontent-ng-c3825108355]{display:flex;justify-content:center;flex-grow:1;gap:8px;position:absolute;bottom:0;left:0;right:0;background:inherit}.btn-wrapper[_ngcontent-ng-c3825108355]   .modal-btn[_ngcontent-ng-c3825108355]{border-radius:4px;font-size:1rem;display:flex;padding:12px 24px;justify-content:center;align-items:center}.btn-wrapper[_ngcontent-ng-c3825108355]   .btn-confirm[_ngcontent-ng-c3825108355]{border:none;background-color:#2d489d;color:#fff}.btn-wrapper[_ngcontent-ng-c3825108355]   .btn-dismiss[_ngcontent-ng-c3825108355]{background-color:transparent;border:1px solid #2D489D;color:#2d489d}</style><style>.card-container[_ngcontent-ng-c3616602053]{padding:0;border:none;outline:none;font:inherit;color:inherit;background-color:transparent;animation:none;transition:none;display:flex;position:relative;border-radius:4px;width:100%;max-width:360px;background-color:#2d489d;height:180px;margin:0 auto}.card-container[_ngcontent-ng-c3616602053]:focus{outline:none}.card-container[_ngcontent-ng-c3616602053]   .title[_ngcontent-ng-c3616602053]{padding:1rem;font-size:1.375rem;color:#fff;font-style:normal;font-weight:600;line-height:120%;width:100%;white-space:pre-line}.card-container[_ngcontent-ng-c3616602053]   .svg1[_ngcontent-ng-c3616602053]{position:absolute;width:140px;right:0;bottom:0}.card-container[_ngcontent-ng-c3616602053]   .svg2[_ngcontent-ng-c3616602053]{position:absolute;width:163px;right:25px;bottom:0}.card-container[_ngcontent-ng-c3616602053]   .pos-forward[_ngcontent-ng-c3616602053]{z-index:10}.card-container[_ngcontent-ng-c3616602053]:hover{cursor:pointer}@media screen and (min-width: 992px){.card-container[_ngcontent-ng-c3616602053]{min-width:360px}}.skeleton-loader[_ngcontent-ng-c3616602053]{width:100%;height:180px;background:#eee;color:transparent;background-image:linear-gradient(to right,#eee 8%,#ddd 18%,#eee 33%);border-radius:4px;max-width:360px;margin:0 auto;background-size:1000px 104px;animation-duration:1.5s;animation-fill-mode:forwards;animation-iteration-count:infinite;animation-name:_ngcontent-ng-c3616602053_shimmer;animation-timing-function:linear}.skeleton-loader[_ngcontent-ng-c3616602053]   .title[_ngcontent-ng-c3616602053], .skeleton-loader[_ngcontent-ng-c3616602053]   .svg1[_ngcontent-ng-c3616602053], .skeleton-loader[_ngcontent-ng-c3616602053]   .svg2[_ngcontent-ng-c3616602053]{display:none}@keyframes _ngcontent-ng-c3616602053_shimmer{0%{background-position:-468px 0}to{background-position:468px 0}}</style></head>
+<body><span role="alert" data-acsb-sr-alert="true" data-acsb-sr-only="true" class="acsb-sr-alert acsb-sr-only" data-acsb-force-visible="true" style="position: absolute; width: 200px; height: 1px; margin-top: -1px; z-index: -1; border: 0px; top: 0px; left: 0px; overflow: hidden; outline: 0px;">Premi Opzione+1 per la modalità lettore dello schermo, Opzione+0 per annullare</span><access-widget-ui data-acsb="" class="notranslate"></access-widget-ui><a href="https://accessibe.com/blog/knowledgebase/screen-reader-guide" target="_blank" rel="noopener" tabindex="-1" data-acsb="sr-trigger" data-acsb-sr-only="true" class="acsb-sr-only" style="position: absolute; width: 200px; height: 1px; margin-top: -1px; z-index: -1; border: 0px; top: 0px; left: 0px; overflow: hidden; outline: 0px;">Guida all'accessibilità per lettori dello schermo, feedback e segnalazione dei problemi | Nuova finestra</a><access-widget-ui data-acsb="skipLinks" class="notranslate"></access-widget-ui><access-widget-ui data-acsb="" class="notranslate"></access-widget-ui><access-widget-ui data-acsb="" class="notranslate"></access-widget-ui>
+  <app-root _nghost-ng-c2299527430="" ng-version="18.2.13"><b2c-header _ngcontent-ng-c2299527430="" _nghost-ng-c4234839704=""><header _ngcontent-ng-c4234839704="" class="header"><div _ngcontent-ng-c4234839704="" id="mid-layer"><div _ngcontent-ng-c4234839704="" class="mid-layer-container"><div _ngcontent-ng-c4234839704="" class="logo-musei-italiani"><button _ngcontent-ng-c4234839704="" class="btn-home d-md-none" tabindex="0" aria-label="Torna alla home"><img _ngcontent-ng-c4234839704="" loading="eager" id="logo-mi-mini" width="150px" height="28px" class="d-md-none img-fluid" alt="Logo Musei Italiani" src="assets/images/logo-mi-mini.webp"></button><a _ngcontent-ng-c4234839704="" href="https://www.museiitaliani.it" target="_blank"><img _ngcontent-ng-c4234839704="" loading="eager" id="logo-musei-ita" width="85px" height="47px" class="d-none d-md-inline" alt="Logo Musei Italiani" src="assets/images/logo-musei-italiani-header.webp"></a><span _ngcontent-ng-c4234839704="" class="d-none d-md-inline text-title-header">Acquisto biglietto</span><!----><!----></div><nav _ngcontent-ng-c4234839704="" class="info-links"><button _ngcontent-ng-c4234839704="" class="reset-btn-style d-flex" tabindex="0" aria-label="Apri barra navigazione laterale"><span _ngcontent-ng-c4234839704="" class="info-links-item material-symbols-sharp nav-icon"> account_circle </span></button><!----><button _ngcontent-ng-c4234839704="" class="reset-btn-style info-links-item lang-switch justify-content-end justify-content-md-center" tabindex="0" aria-label="Apri sezione di cambio lingua" aria-expanded="false"><span _ngcontent-ng-c4234839704="" class="lang-switch-btn">IT</span><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp nav-icon"> expand_more </span><!----><!----></button></nav></div></div><nav _ngcontent-ng-c4234839704="" id="b2c-navbar" class="bg-light"><div _ngcontent-ng-c4234839704="" id="burger-menu"><div _ngcontent-ng-c4234839704="" id="side-menu"><div _ngcontent-ng-c4234839704="" class="side-menu-header"><h2 _ngcontent-ng-c4234839704="">Area personale</h2></div><div _ngcontent-ng-c4234839704="" class="side-menu-body"><div _ngcontent-ng-c4234839704="" class="side-menu-welcome"><span _ngcontent-ng-c4234839704="">Ciao </span></div><ul _ngcontent-ng-c4234839704="" class="side-menu-item-list"><legend _ngcontent-ng-c4234839704="">Impostazioni</legend><li _ngcontent-ng-c4234839704=""><button _ngcontent-ng-c4234839704="" class="w-100 reset-btn-style side-menu-item mt-4" tabindex="-1" aria-label="Home"><div _ngcontent-ng-c4234839704=""><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp"> home </span><span _ngcontent-ng-c4234839704="">Home</span></div><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp rtl-icon"> chevron_right </span></button></li><li _ngcontent-ng-c4234839704=""><button _ngcontent-ng-c4234839704="" class="w-100 reset-btn-style side-menu-item mt-4" tabindex="-1" aria-label="Il mio profilo"><div _ngcontent-ng-c4234839704=""><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp"> account_circle </span><span _ngcontent-ng-c4234839704="">Il mio profilo</span></div><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp rtl-icon"> chevron_right </span></button></li><li _ngcontent-ng-c4234839704=""><button _ngcontent-ng-c4234839704="" class="w-100 reset-btn-style side-menu-item" tabindex="-1" aria-label="I miei Biglietti"><div _ngcontent-ng-c4234839704=""><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp"> confirmation_number </span><span _ngcontent-ng-c4234839704="">I miei Biglietti</span></div><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp rtl-icon"> chevron_right </span></button></li><li _ngcontent-ng-c4234839704=""><button _ngcontent-ng-c4234839704="" class="w-100 reset-btn-style side-menu-item" tabindex="-1" aria-label="Rubrica visitatori"><div _ngcontent-ng-c4234839704=""><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp"> import_contacts </span><span _ngcontent-ng-c4234839704="">Rubrica visitatori</span></div><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp rtl-icon"> chevron_right </span></button></li><button _ngcontent-ng-c4234839704="" class="w-100 reset-btn-style side-menu-item d-none" tabindex="-1"><div _ngcontent-ng-c4234839704=""><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp"> search </span><span _ngcontent-ng-c4234839704="">Acquista</span></div><span _ngcontent-ng-c4234839704="" aria-hidden="true" class="material-symbols-sharp rtl-icon"> chevron_right </span></button></ul><div _ngcontent-ng-c4234839704="" class="side-menu-footer"><div _ngcontent-ng-c4234839704="" class="footer-content"><!----><div _ngcontent-ng-c4234839704="" class="non-logged-user-section"><span _ngcontent-ng-c4234839704="" class="footer-title">Autenticazione richiesta</span><span _ngcontent-ng-c4234839704="" class="footer-message">Registrati per comprare i biglietti</span><button _ngcontent-ng-c4234839704="" tabindex="-1">Accedi / Registrati</button></div><!----></div></div></div></div><div _ngcontent-ng-c4234839704="" id="overlay" class="d-none"></div></div></nav></header><div _ngcontent-ng-c4234839704="" id="lang-drop-overlay" class="d-none"></div><simple-confirm-dialog _ngcontent-ng-c4234839704="" _nghost-ng-c774412820=""><dialog-wrapper _ngcontent-ng-c774412820="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c774412820="" class="modal-header"><h3 _ngcontent-ng-c774412820="" class="modal-title">Header.CONFIRM_REDIRECT_MODAL_TITLE</h3><button _ngcontent-ng-c774412820="" role="button" aria-label="Chiudi"><span _ngcontent-ng-c774412820="" aria-hidden="true" class="material-symbols-sharp">close</span></button><!----></div><p _ngcontent-ng-c774412820=""> Stai per abbandonare, perderai i dati selezionati.
+ Vuoi continuare? <!----></p><div _ngcontent-ng-c774412820="" class="modal-btn"><button _ngcontent-ng-c774412820="" class="modal-btn btn-dismiss" aria-label="Annulla">Annulla</button><!----><button _ngcontent-ng-c774412820="" class="modal-btn btn-confirm" aria-label="Conferma">Conferma</button><!----><!----></div></dialog></dialog-wrapper></simple-confirm-dialog><simple-confirm-dialog _ngcontent-ng-c4234839704="" _nghost-ng-c774412820=""><dialog-wrapper _ngcontent-ng-c774412820="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c774412820="" class="modal-header"><h3 _ngcontent-ng-c774412820="" class="modal-title">Confermi la cancellazione dell'account?</h3><button _ngcontent-ng-c774412820="" role="button" aria-label="Chiudi"><span _ngcontent-ng-c774412820="" aria-hidden="true" class="material-symbols-sharp">close</span></button><!----></div><p _ngcontent-ng-c774412820=""> Sei sicuro di voler procedere con la cancellazione dell'account?
+Non sarai piu in grado di recuperarlo. <!----></p><div _ngcontent-ng-c774412820="" class="modal-btn"><button _ngcontent-ng-c774412820="" class="modal-btn btn-dismiss" aria-label="Chiudi">Chiudi</button><!----><button _ngcontent-ng-c774412820="" class="modal-btn btn-confirm" aria-label="Conferma">Conferma</button><!----><!----></div></dialog></dialog-wrapper></simple-confirm-dialog><simple-confirm-dialog _ngcontent-ng-c4234839704="" _nghost-ng-c774412820=""><dialog-wrapper _ngcontent-ng-c774412820="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c774412820="" class="modal-header"><h3 _ngcontent-ng-c774412820="" class="modal-title">Account cancellato con successo</h3><!----></div><p _ngcontent-ng-c774412820=""> Il suo account è stato cancellato con successo.
+Un email di conferma è stata inviata all'indirizzo email registrato. <!----></p><div _ngcontent-ng-c774412820="" class="modal-btn"><!----><button _ngcontent-ng-c774412820="" class="modal-btn btn-confirm" aria-label="Conferma">Conferma</button><!----><!----></div></dialog></dialog-wrapper></simple-confirm-dialog><simple-error-dialog _ngcontent-ng-c4234839704="" _nghost-ng-c1040868794=""><dialog-wrapper _ngcontent-ng-c1040868794="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c1040868794="" class="modal-header"><div _ngcontent-ng-c1040868794="" class="title-wrapper"><span _ngcontent-ng-c1040868794="" aria-hidden="true" class="material-symbols-sharp error-icon"> error </span><h3 _ngcontent-ng-c1040868794="" class="modal-title"> Errore durante la cancellazione </h3><!----></div><button _ngcontent-ng-c1040868794="" role="button" aria-label="Chiudi"><span _ngcontent-ng-c1040868794="" aria-hidden="true" class="material-symbols-sharp">close</span></button><!----></div><p _ngcontent-ng-c1040868794="">Si è verificato un errore durante la cancellazione dell'account.
+La preghiamo di riprovare piu tardi.</p><div _ngcontent-ng-c1040868794="" class="modal-btn"><button _ngcontent-ng-c1040868794="" class="modal-btn btn-confirm" aria-label="Continua">Continua</button></div></dialog></dialog-wrapper></simple-error-dialog><simple-error-dialog _ngcontent-ng-c4234839704="" _nghost-ng-c1040868794=""><dialog-wrapper _ngcontent-ng-c1040868794="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c1040868794="" class="modal-header"><div _ngcontent-ng-c1040868794="" class="title-wrapper"><span _ngcontent-ng-c1040868794="" aria-hidden="true" class="material-symbols-sharp error-icon"> error </span><h3 _ngcontent-ng-c1040868794="" class="modal-title"> Errore caricamento informazioni utente </h3><!----></div><button _ngcontent-ng-c1040868794="" role="button" aria-label="Chiudi"><span _ngcontent-ng-c1040868794="" aria-hidden="true" class="material-symbols-sharp">close</span></button><!----></div><p _ngcontent-ng-c1040868794="">E' stato riscontrato un errore durante il caricamento dei tuoi dati utente.
+Verrà eseguito un logout automatico.</p><div _ngcontent-ng-c1040868794="" class="modal-btn"><button _ngcontent-ng-c1040868794="" class="modal-btn btn-confirm" aria-label="Continua">Continua</button></div></dialog></dialog-wrapper></simple-error-dialog><language-select-dialog _ngcontent-ng-c4234839704="" _nghost-ng-c144520261=""><dialog-wrapper _ngcontent-ng-c144520261="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c144520261="" class="modal-header"><div _ngcontent-ng-c144520261="" class="title-wrapper"><span _ngcontent-ng-c144520261="" aria-hidden="true" class="material-symbols-sharp tkt-icon"> translate </span><h3 _ngcontent-ng-c144520261="" class="modal-title">Seleziona lingua</h3></div><button _ngcontent-ng-c144520261="" role="button" aria-label="Chiudi"><span _ngcontent-ng-c144520261="" aria-hidden="true" class="material-symbols-sharp">close</span></button></div><div _ngcontent-ng-c144520261="" id="supported-languages"><form _ngcontent-ng-c144520261="" novalidate="" class="ng-untouched ng-pristine ng-valid"><fieldset _ngcontent-ng-c144520261=""><label _ngcontent-ng-c144520261="" class="language-item" for="lang-it"><input _ngcontent-ng-c144520261="" type="radio" name="lang-choice" tabindex="0" class="lang-radio ng-untouched ng-pristine ng-valid" id="lang-it" alt="Cambia lingua: Italiano" style=""><div _ngcontent-ng-c144520261="" class="lang-name-container"><span _ngcontent-ng-c144520261="" class="lang-name">Italiano</span><span _ngcontent-ng-c144520261="" class="lang-original-name">Italiano</span></div></label><label _ngcontent-ng-c144520261="" class="language-item" for="lang-en"><input _ngcontent-ng-c144520261="" type="radio" name="lang-choice" tabindex="0" class="lang-radio ng-untouched ng-pristine ng-valid" id="lang-en" alt="Cambia lingua: English" style=""><div _ngcontent-ng-c144520261="" class="lang-name-container"><span _ngcontent-ng-c144520261="" class="lang-name">English</span><span _ngcontent-ng-c144520261="" class="lang-original-name">Inglese</span></div></label><label _ngcontent-ng-c144520261="" class="language-item" for="lang-es"><input _ngcontent-ng-c144520261="" type="radio" name="lang-choice" tabindex="0" class="lang-radio ng-untouched ng-pristine ng-valid" id="lang-es" alt="Cambia lingua: Español" style=""><div _ngcontent-ng-c144520261="" class="lang-name-container"><span _ngcontent-ng-c144520261="" class="lang-name">Español</span><span _ngcontent-ng-c144520261="" class="lang-original-name">Spagnolo</span></div></label><label _ngcontent-ng-c144520261="" class="language-item" for="lang-fr"><input _ngcontent-ng-c144520261="" type="radio" name="lang-choice" tabindex="0" class="lang-radio ng-untouched ng-pristine ng-valid" id="lang-fr" alt="Cambia lingua: Français" style=""><div _ngcontent-ng-c144520261="" class="lang-name-container"><span _ngcontent-ng-c144520261="" class="lang-name">Français</span><span _ngcontent-ng-c144520261="" class="lang-original-name">Francese</span></div></label><label _ngcontent-ng-c144520261="" class="language-item" for="lang-ar"><input _ngcontent-ng-c144520261="" type="radio" name="lang-choice" tabindex="0" class="lang-radio ng-untouched ng-pristine ng-valid" id="lang-ar" alt="Cambia lingua: عربية" style=""><div _ngcontent-ng-c144520261="" class="lang-name-container"><span _ngcontent-ng-c144520261="" class="lang-name">عربية</span><span _ngcontent-ng-c144520261="" class="lang-original-name">Arabo</span></div></label><!----></fieldset></form></div><div _ngcontent-ng-c144520261="" class="bottom-sect"><button _ngcontent-ng-c144520261="" id="select-lang"><span _ngcontent-ng-c144520261="">Seleziona</span></button></div></dialog></dialog-wrapper></language-select-dialog></b2c-header><main _ngcontent-ng-c2299527430=""><router-outlet _ngcontent-ng-c2299527430=""></router-outlet><app-buy-ticketless _nghost-ng-c110650983=""><div _ngcontent-ng-c110650983="" class="buy-ticketless-content"><museum-info-banner _ngcontent-ng-c110650983="" _nghost-ng-c1554334661=""><div _ngcontent-ng-c1554334661="" id="info-museum-banner"><div _ngcontent-ng-c1554334661="" class="sr-only" tabindex="0"><p _ngcontent-ng-c1554334661=""><span _ngcontent-ng-c1554334661="">Dettagli sul Museo selezionato:</span><span _ngcontent-ng-c1554334661="">Museo selezionato:: Anfiteatro campano</span><span _ngcontent-ng-c1554334661="">Stato museo:: <span _ngcontent-ng-c1554334661=""><span _ngcontent-ng-c1554334661="">Aperto</span><span _ngcontent-ng-c1554334661="" class="d-none d-sm-inline"> - </span><span _ngcontent-ng-c1554334661="" class="next-opening d-block d-sm-inline">Chiude alle 20:00</span><!----></span><!----></span><!----><!----></p></div><div _ngcontent-ng-c1554334661="" class="info-container"><div _ngcontent-ng-c1554334661="" class="name-hours"><h1 _ngcontent-ng-c1554334661="" class="denom">Anfiteatro campano</h1><span _ngcontent-ng-c1554334661="" class="ticket-type"></span><div _ngcontent-ng-c1554334661="" class="hours"><span _ngcontent-ng-c1554334661="" aria-hidden="true" class="material-symbols-sharp me-2 icon"> schedule </span><span _ngcontent-ng-c1554334661=""><span _ngcontent-ng-c1554334661="">Aperto</span><span _ngcontent-ng-c1554334661="" class="d-none d-sm-inline"> - </span><span _ngcontent-ng-c1554334661="" class="next-opening d-block d-sm-inline">Chiude alle 20:00</span><!----></span></div><!----><!----></div><div _ngcontent-ng-c1554334661="" class="thumbnail"><!----><img _ngcontent-ng-c1554334661="" width="60px" height="60px" class="thumbnail-img" src="https://akamaicdn.museiitaliani.it/museiitaliani-prod/prod/thumbs/auto/d01dd89083ff0ffd0a61a87f68fca7b00fd4d3c7dadc2e8ddba903e8a7fb39dd_256p.jpg?ResponseContentDisposition=inline" alt="undefined"><!----></div></div><!----><!----></div></museum-info-banner><!----><!----><div _ngcontent-ng-c110650983="" class="row-md buy-ticket-container"><purchase-selector _ngcontent-ng-c110650983="" _nghost-ng-c796076758=""><div _ngcontent-ng-c796076758="" class="purchase-selector-container"><h2 _ngcontent-ng-c796076758="" tabindex="0" class="sr-only"> Scegli cosa vorresti acquistare:  </h2><div _ngcontent-ng-c796076758="" class="visitors-info-container py-3"><button _ngcontent-ng-c796076758="" class="visitors-info short-banner"><div _ngcontent-ng-c796076758="" class="content"><span _ngcontent-ng-c796076758="" class="visitors-info-title">Informazioni per i visitatori</span></div><div _ngcontent-ng-c796076758="" class="img-container"><img _ngcontent-ng-c796076758="" loading="lazy" src="assets/images/info-circle.svg" role="presentation" alt="info" width="50px" height="50px" class="visitors-info-img"></div></button></div><div _ngcontent-ng-c796076758="" class="ticket-choice-cards"><div _ngcontent-ng-c796076758="" class="py-3 single-card-container"><choice-card _ngcontent-ng-c796076758="" firstimg="assets/images/ticket-round.svg" secondimg="assets/images/ticket-spiky.svg" _nghost-ng-c3616602053=""><button _ngcontent-ng-c3616602053="" role="button" class="card-container" aria-label="AcquistaBiglietti"><div _ngcontent-ng-c3616602053=""><h2 _ngcontent-ng-c3616602053="" class="title text-start">Biglietti</h2></div><img _ngcontent-ng-c3616602053="" role="presentation" alt="" width="140px" height="135px" class="svg1 pos-forward" src="assets/images/ticket-round.svg"><!----><img _ngcontent-ng-c3616602053="" role="presentation" alt="" width="163px" height="112px" class="svg2" src="assets/images/ticket-spiky.svg"><!----></button></choice-card></div><!----><!----></div><!----><!----></div><app-simple-details-dialog _ngcontent-ng-c796076758="" customicon="info" _nghost-ng-c3825108355=""><dialog-wrapper _ngcontent-ng-c3825108355="" class="info-dialog" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c3825108355="" class="info-modal"><div _ngcontent-ng-c3825108355="" class="modal-header"><p _ngcontent-ng-c3825108355="" class="sr-only" tabindex="0">Pop up modale dettagli aperta</p><div _ngcontent-ng-c3825108355="" class="title-wrapper"><span _ngcontent-ng-c3825108355="" aria-hidden="true" class="material-symbols-sharp tkt-icon"> info </span><h3 _ngcontent-ng-c3825108355="" tabindex="0" class="modal-title text-start"> Informazioni per i visitatori </h3><!----></div><button _ngcontent-ng-c3825108355="" role="button" aria-label="Chiudi modale dettagli"><span _ngcontent-ng-c3825108355="" aria-hidden="true" class="material-symbols-sharp">close</span></button><!----></div><div _ngcontent-ng-c3825108355="" class="scrollable"><p _ngcontent-ng-c3825108355="" tabindex="0" class="description">Gentilissimi ,ogni volta che si effettua un cambio di nominativo o di data, viene generato un nuovo biglietto con un nuovo QRcode, che sostituisce il precedente. Nel portale web e nell'app, il nuovo biglietto sovrascrive quello esistente nella sezione "I miei biglietti".  Inoltre, i biglietti oggetto della modifica già recapitati all'acquirente e al beneficiario tramite mail vengono annullati e risultano, pertanto, non validi a un eventuale scansione al controllo accessi. L'acquirente riceverà una email che lo informerà del cambio effettuato e conterrà il nuovo biglietto. Anche il beneficiario riceverà una notifica via email relativa al cambiamento; tuttavia, riceverà il nuovo biglietto solo se la modifica ha riguardato la data. Se il cambiamento ha interessato il nominativo, il nuovo biglietto verrà inviato all'acquirente e al nuovo beneficiario, a condizione che l'indirizzo email sia stato fornito durante la modifica.</p></div></div></dialog></dialog-wrapper></app-simple-details-dialog></purchase-selector><!----><!----><!----><!----><!----><!----><div _ngcontent-ng-c110650983=""><!----></div><!----></div></div><!----><simple-error-dialog _ngcontent-ng-c110650983="" _nghost-ng-c1040868794=""><dialog-wrapper _ngcontent-ng-c1040868794="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c1040868794="" class="modal-header"><div _ngcontent-ng-c1040868794="" class="title-wrapper"><span _ngcontent-ng-c1040868794="" aria-hidden="true" class="material-symbols-sharp error-icon"> error </span><h3 _ngcontent-ng-c1040868794="" class="modal-title"> Errore pagamento </h3><!----></div><!----></div><p _ngcontent-ng-c1040868794="">Il pagamento non e' andato a buon fine.</p><div _ngcontent-ng-c1040868794="" class="modal-btn"><button _ngcontent-ng-c1040868794="" class="modal-btn btn-confirm" aria-label="Continua">Continua</button></div></dialog></dialog-wrapper></simple-error-dialog><simple-confirm-dialog _ngcontent-ng-c110650983="" _nghost-ng-c774412820=""><dialog-wrapper _ngcontent-ng-c774412820="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c774412820="" class="modal-header"><h3 _ngcontent-ng-c774412820="" class="modal-title">Acquisto completato</h3><!----></div><p _ngcontent-ng-c774412820=""> Ti ringraziamo per l'acquisto.
+Stiamo creando il tuo biglietto, sarà disponibile tra pochi minuti. <!----></p><div _ngcontent-ng-c774412820="" class="modal-btn"><!----><button _ngcontent-ng-c774412820="" class="modal-btn btn-confirm" aria-label="Chiudi">Chiudi</button><!----><!----></div></dialog></dialog-wrapper></simple-confirm-dialog></app-buy-ticketless><!----></main><b2c-footer _ngcontent-ng-c2299527430="" _nghost-ng-c1478093417=""><footer _ngcontent-ng-c1478093417="" class="it-footer"><div _ngcontent-ng-c1478093417="" class="it-footer-main"><div _ngcontent-ng-c1478093417="" class="container-footer px-4 py-0"><section _ngcontent-ng-c1478093417="" class="pt-3 px-2"><div _ngcontent-ng-c1478093417="" id="b2c-footer-logos"><img _ngcontent-ng-c1478093417="" loading="lazy" role="img" width="200px" height="72px" class="footerImg" src="assets/images/EN_Funded_by_the_European_Union.svg" alt="Logo del Unione Europea"><a _ngcontent-ng-c1478093417="" title="Collegamento a sito esterno" target="_blank" aria-label="MIC Ministero della Cultura - Collegamento a sito esterno - Apertura in nuova scheda" rel="noopener" href="https://cultura.gov.it/"><img _ngcontent-ng-c1478093417="" loading="lazy" width="200px" height="72px" class="footerImg" src="assets/images/MiC_logo_esteso_Negativo.svg" alt="Logo del Ministero Della Cultura"></a><img _ngcontent-ng-c1478093417="" loading="lazy" role="img" alt="Logo PNNR" width="200px" height="72px" class="footerImg" src="assets/images/logo-italia-domani.svg"></div><!----><!----></section><section _ngcontent-ng-c1478093417="" class="mt-4 border-white border-top px-0 pb-4"><div _ngcontent-ng-c1478093417="" class="row pt-4"><div _ngcontent-ng-c1478093417="" class="col-md-4 pb-md-2"><h4 _ngcontent-ng-c1478093417="" class="h5">CONTATTI</h4></div></div><div _ngcontent-ng-c1478093417="" class="row"><div _ngcontent-ng-c1478093417="" class="col-md-4"><h5 _ngcontent-ng-c1478093417="" class="h6 sub-title-footer mb-0"> Direzione generale Musei </h5><ul _ngcontent-ng-c1478093417="" class="footer-list list-unstyled"><li _ngcontent-ng-c1478093417=""><span _ngcontent-ng-c1478093417=""> via di San Michele, 22 </span></li><li _ngcontent-ng-c1478093417=""><span _ngcontent-ng-c1478093417=""> 00153 - Roma </span></li></ul></div><div _ngcontent-ng-c1478093417="" class="col-md-4 pt-md-0 p-smn"><h5 _ngcontent-ng-c1478093417="" class="h6 sub-title-footer mb-0">Helpdesk biglietti</h5><ul _ngcontent-ng-c1478093417="" class="footer-list list-unstyled"><li _ngcontent-ng-c1478093417=""><span _ngcontent-ng-c1478093417=""> mail: info@museiitaliani.it </span></li><li _ngcontent-ng-c1478093417=""><span _ngcontent-ng-c1478093417=""> Tel: +39 06 87570182 </span></li><li _ngcontent-ng-c1478093417=""><span _ngcontent-ng-c1478093417="">Il servizio è attivo tutti i giorni dalle 9:00 alle 17:30</span></li></ul></div><div _ngcontent-ng-c1478093417="" class="col-md-4 pt-md-0 p-smn"><h5 _ngcontent-ng-c1478093417="" class="h6 sub-title-footer">Seguici su:</h5><ul _ngcontent-ng-c1478093417="" class="list-inline align-text-start social"><li _ngcontent-ng-c1478093417="" class="list-inline-item"><a _ngcontent-ng-c1478093417="" target="_blank" rel="noopener" title="Collegamento a sito esterno" aria-label="Facebook Ministero della Cultura - Apertura in nuova scheda" class="text-white text-decoration-none" href="https://www.facebook.com/museitaliani/"><fa-icon _ngcontent-ng-c1478093417="" class="ng-fa-icon fa-lg"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"></path></svg></fa-icon></a></li><li _ngcontent-ng-c1478093417="" class="list-inline-item"><a _ngcontent-ng-c1478093417="" target="_blank" rel="noopener" title="Collegamento a sito esterno" aria-label="Twitter Ministero della Cultura - Apertura in nuova scheda" class="text-white text-decoration-none" href="https://twitter.com/museitaliani/"><fa-icon _ngcontent-ng-c1478093417="" class="ng-fa-icon fa-lg"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="x-twitter" class="svg-inline--fa fa-x-twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></fa-icon></a></li><li _ngcontent-ng-c1478093417="" class="list-inline-item"><a _ngcontent-ng-c1478093417="" target="_blank" rel="noopener" title="Collegamento a sito esterno" aria-label="Instagram Ministero della Cultura - Apertura in nuova scheda" class="text-white text-decoration-none" href="https://www.instagram.com/museitaliani/"><fa-icon _ngcontent-ng-c1478093417="" class="ng-fa-icon fa-lg"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></fa-icon></a></li></ul></div></div></section></div></div><div _ngcontent-ng-c1478093417="" class="it-footer-small-prints clearfix"><div _ngcontent-ng-c1478093417="" class="container-footer"><ul _ngcontent-ng-c1478093417="" class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column-reverse flex-md-row justify-content-md-between align-items-center"><li _ngcontent-ng-c1478093417="" class="list-inline-item"><small _ngcontent-ng-c1478093417="" class="mb-0 small font-weight-light"> © 2026, Direzione generale Musei </small></li><li _ngcontent-ng-c1478093417="" class="list-inline-item"><a _ngcontent-ng-c1478093417="" target="_blank" href="https://form.agid.gov.it/view/c60b1800-7c02-11f0-970c-51355e60bc72" title="Accessibilita" class="link-footer"> Dichiarazione di accesibilità </a></li><li _ngcontent-ng-c1478093417="" class="list-inline-item"><a _ngcontent-ng-c1478093417="" target="_blank" href="https://museiitaliani.it/privacy-policy" title="Note Legali" class="link-footer"> Privacy Policy</a></li></ul></div></div></footer></b2c-footer><login-request-dialog _ngcontent-ng-c2299527430="" _nghost-ng-c3547136316=""><dialog-wrapper _ngcontent-ng-c3547136316="" _nghost-ng-c2412294985=""><dialog _ngcontent-ng-c2412294985="" id="custom-dialog"><div _ngcontent-ng-c3547136316="" class="modal-header"><h3 _ngcontent-ng-c3547136316="" class="modal-title">La tua sessione è scaduta</h3><button _ngcontent-ng-c3547136316="" role="button" aria-label="Chiudi"><span _ngcontent-ng-c3547136316="" aria-hidden="true" class="material-symbols-sharp">close</span></button></div><p _ngcontent-ng-c3547136316="">Abbiamo rilevato una sessione scaduta. Per continuare a usare il servizio, puoi effettuare nuovamente il login ora oppure eseguire il logout per continuare la navigazione.</p><div _ngcontent-ng-c3547136316="" class="modal-btn-container"><button _ngcontent-ng-c3547136316="" class="modal-btn keep-browsing">Continua a navigare</button><button _ngcontent-ng-c3547136316="" class="modal-btn go-to-login">Vai a login</button></div></dialog></dialog-wrapper></login-request-dialog></app-root>
+
+<link rel="modulepreload" href="chunk-HTJJSB4K.js"><link rel="modulepreload" href="chunk-5I2IWPWD.js"><link rel="modulepreload" href="chunk-ZDL777VS.js"><link rel="modulepreload" href="chunk-GLJMXSAN.js"><link rel="modulepreload" href="chunk-YOYQYNCU.js"><link rel="modulepreload" href="chunk-CPFQEIQD.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-L2ZNNWPJ.js" defer=""></script><script src="main-6C6S5IDV.js" type="module"></script>
+
+<iframe role="presentation" srcdoc="&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;apiSanitizer&lt;/title&gt;&lt;/head&gt;&lt;/body&gt;&lt;/html&gt;" style="visibility: hidden; pointer-events: none; position: fixed;"></iframe><div class="acsb-trigger acsb-widget" tabindex="0" role="button"></div></body></html>

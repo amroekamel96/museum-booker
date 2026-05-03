@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python3 inspect_site2.py)",
+      "Bash(.venv/bin/python3 -c \"import ast; ast.parse\\(open\\('booker.py'\\).read\\(\\)\\); print\\('booker.py OK'\\)\")",
+      "Bash(.venv/bin/python3 -c \"import ast; ast.parse\\(open\\('main.py'\\).read\\(\\)\\); print\\('main.py OK'\\)\")"
+    ]
+  }
+}
