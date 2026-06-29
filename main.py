@@ -234,10 +234,7 @@ class MuseumBookerApp(ctk.CTk):
                         name = line.strip()
                         if not name:
                             continue
-                        parts = name.split(None, 1)
-                        first = parts[0] if parts else ""
-                        last = parts[1] if len(parts) > 1 else ""
-                        self._add_visitor_row(first, last, "")
+                        self._add_visitor_row(name, ".", "")
 
             self._log(f"Imported visitors from {path}")
         except Exception as exc:
