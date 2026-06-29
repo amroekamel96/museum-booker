@@ -65,8 +65,9 @@ class MuseumBooker:
                 self._click_biglietti()
                 self._select_offer(data["category"])
                 self._pick_date_and_slot(data["date"], data.get("timeslot", ""))
-                self._set_quantities(data["quantities"])
-                self._click_forward()          # "Prosegui" or "Acquista N biglietti"
+                self._click_forward()          # "Prosegui" from calendar to quantities
+                self._set_quantities(data["quantities"], visitor_count=len(data.get("visitors", [])))
+                self._click_forward()          # "Acquista N biglietti" or forward from quantities
                 self._guest_checkout()         # click "Prosegui come ospite"
                 self._fill_visitors(data["visitors"])
                 self._click_forward()          # proceed to payment
@@ -212,10 +213,11 @@ class MuseumBooker:
         if day.count():
             cls = day.first.get_attribute("class") or ""
             if "not-in-program" in cls or "closure" in cls:
-                self.log(f"Warning: {date_label} is closed or not in program.")
-            self.log(f"Clicking date: {date_label}")
-            day.first.click()
-            return
+                self.log(f"Warning: {date_label} is closed or not in program — falling back to first available day.")
+            else:
+                self.log(f"Clicking date: {date_label}")
+                day.first.click()
+                return
 
         # Fallback: click first available day
         avail = self.page.locator("time.day.available[role='button']")
@@ -258,40 +260,49 @@ class MuseumBooker:
         badges.first.click()
         time.sleep(1)
 
-    def _set_quantities(self, quantities: dict[str, int]):
-        """Set ticket quantities using +/- counter buttons (only present on non-calendar offers)."""
-        types = self.page.locator(".ticket-type")
-        if not types.count():
-            self.log("No quantity controls found (calendar flow — quantities set via visitor count).")
+    def _set_quantities(self, quantities: dict[str, int], visitor_count: int = 0):
+        """Set ticket quantities using +/- counter buttons."""
+        ticket_cards = self.page.locator("single-ticket-selector")
+        try:
+            ticket_cards.first.wait_for(state="visible", timeout=8_000)
+        except PWTimeout:
+            self.log("No quantity controls found — skipping.")
             return
 
-        self.log("Setting ticket quantities…")
-        add_buttons = self.page.locator("button[aria-label='Aggiugni un biglietto']")
-        inputs = self.page.locator("input.counter-input")
+        has_explicit = any(v > 0 for v in quantities.values())
+        if not has_explicit and visitor_count > 0:
+            quantities = {"Full price": visitor_count}
+            self.log(f"No explicit quantities — defaulting to {visitor_count} Full price ticket(s).")
 
+        self.log("Setting ticket quantities…")
         for ticket_type, qty in quantities.items():
             if qty <= 0:
                 continue
             labels = TICKET_TYPE_LABELS.get(ticket_type, [ticket_type])
-            idx = self._find_type_index(types, labels)
+            idx = self._find_ticket_card(ticket_cards, labels)
             if idx is None:
                 self.log(f"  Ticket type {ticket_type!r} not found on page — skipping.")
                 continue
 
-            self.log(f"  {ticket_type}: {qty}")
-            # Try direct numeric input first (fastest)
-            if idx < inputs.count():
-                inputs.nth(idx).fill(str(qty))
-                inputs.nth(idx).press("Tab")
-                time.sleep(0.3)
-            elif idx < add_buttons.count():
-                for _ in range(qty):
-                    add_buttons.nth(idx).click()
-                    time.sleep(0.25)
+            card = ticket_cards.nth(idx)
+            counter_input = card.locator("input.counter-input")
+            add_btn = card.locator("button[aria-label='Add a ticket'], "
+                                   "button[aria-label='Aggiugni un biglietto'], "
+                                   "button[aria-label='Aggiungi un biglietto']")
 
-    def _find_type_index(self, types_locator: Locator, labels: list[str]) -> int | None:
-        for i in range(types_locator.count()):
-            cell_text = types_locator.nth(i).inner_text().strip()
+            self.log(f"  {ticket_type}: {qty}")
+            if counter_input.count():
+                counter_input.first.fill(str(qty))
+                counter_input.first.press("Tab")
+                time.sleep(0.5)
+            elif add_btn.count():
+                for _ in range(qty):
+                    add_btn.first.click()
+                    time.sleep(0.3)
+
+    def _find_ticket_card(self, cards_locator: Locator, labels: list[str]) -> int | None:
+        for i in range(cards_locator.count()):
+            cell_text = cards_locator.nth(i).inner_text().strip()
             for label in labels:
                 if label.lower() in cell_text.lower():
                     return i
@@ -304,7 +315,7 @@ class MuseumBooker:
             fwd.first.wait_for(state="visible", timeout=8_000)
         except PWTimeout:
             self.log("Forward button not visible — trying Prosegui fallback.")
-            alt = self.page.locator("button:has-text('Prosegui'):not([disabled])")
+            alt = self.page.locator("button:has-text('Prosegui'):not([disabled]):not(.modal-btn)")
             if alt.count():
                 alt.first.click()
                 time.sleep(2)
@@ -318,9 +329,9 @@ class MuseumBooker:
 
     def _guest_checkout(self):
         """Handle the 'Prosegui come ospite' modal (if it appears)."""
-        guest = self.page.locator("button.modal-btn.guest-payment, button:has-text('Prosegui come ospite')")
+        guest = self.page.locator("button.modal-btn.guest-payment, button:has-text('Prosegui come ospite'), button:has-text('Continue as guest')")
         try:
-            guest.first.wait_for(state="attached", timeout=6_000)
+            guest.first.wait_for(state="visible", timeout=6_000)
         except PWTimeout:
             self.log("Guest checkout modal not present — user may already be logged in.")
             return
@@ -332,16 +343,28 @@ class MuseumBooker:
         self.log(f"Filling details for {len(visitors)} visitor(s)…")
         time.sleep(1)
 
+        # Expand collapsed accordion sections before looking for inputs
+        expand_btns = self.page.locator("button.expand-form-btn")
+        try:
+            expand_btns.first.wait_for(state="visible", timeout=10_000)
+        except PWTimeout:
+            self.log("Visitor form not found — cannot fill visitor details automatically.")
+            return
+        for i in range(expand_btns.count()):
+            expand_btns.nth(i).click()
+            time.sleep(0.4)
+        time.sleep(0.5)
+
         name_inputs    = self.page.locator("input[formcontrolname='name'][placeholder='Nome']")
         last_inputs    = self.page.locator("input[formcontrolname='lastname'][placeholder='Cognome']")
         email_inputs   = self.page.locator("input[formcontrolname='email'][placeholder='Email']")
         confirm_inputs = self.page.locator("input[formcontrolname='confirmEmail']")
 
-        # Wait for at least one visitor block
+        # Wait for inputs to be visible after expanding
         try:
-            name_inputs.first.wait_for(state="visible", timeout=10_000)
+            name_inputs.first.wait_for(state="visible", timeout=5_000)
         except PWTimeout:
-            self.log("Visitor form not found — cannot fill visitor details automatically.")
+            self.log("Visitor inputs not visible after expanding — cannot fill automatically.")
             return
 
         for i, visitor in enumerate(visitors):
