@@ -17,14 +17,22 @@ def _ensure_browser():
     if marker.exists():
         return
     try:
+        import os
+        browsers_path = Path.home() / ".museum-booker" / "browsers"
+        os.environ["PLAYWRIGHT_BROWSERS_PATH"] = str(browsers_path)
+
         from playwright._impl._driver import compute_driver_executable
         driver = compute_driver_executable()
         kwargs = {"capture_output": True}
+        env = os.environ.copy()
+        env["PLAYWRIGHT_BROWSERS_PATH"] = str(browsers_path)
         if sys.platform == "win32":
             kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
-        subprocess.run([str(driver), "install", "chromium"], **kwargs)
-        marker.parent.mkdir(parents=True, exist_ok=True)
-        marker.touch()
+        result = subprocess.run(
+            [str(driver), "install", "chromium"], env=env, **kwargs)
+        if result.returncode == 0:
+            marker.parent.mkdir(parents=True, exist_ok=True)
+            marker.touch()
     except Exception:
         pass
 
