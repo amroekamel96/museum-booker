@@ -59,7 +59,7 @@ class MuseumBooker:
     def run(self, data: dict):
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=False, slow_mo=500)
-            context = browser.new_context(locale="it-IT")
+            context = browser.new_context(locale="en-GB")
             self.page = context.new_page()
             self.page.set_default_timeout(25_000)
 
@@ -97,8 +97,8 @@ class MuseumBooker:
             pass
 
         self.log(f"Searching for '{name}'…")
-        self.page.locator("input[aria-label='Cerca per nome']").fill(name)
-        self.page.locator("button.btn-primary:has-text('Cerca')").first.click()
+        self.page.locator("input[aria-label='Cerca per nome'], input[aria-label='Search by name']").first.fill(name)
+        self.page.locator("button.btn-primary:has-text('Cerca'), button.btn-primary:has-text('Search')").first.click()
         self.page.wait_for_load_state("networkidle")
         time.sleep(1.5)
 
@@ -122,8 +122,9 @@ class MuseumBooker:
         self.log(f"Reached: {self.page.url}")
 
     def _click_biglietti(self):
-        self.log("Clicking 'Biglietti' purchase card…")
-        self.page.locator("[aria-label='AcquistaBiglietti']").click(force=True)
+        self.log("Clicking 'Buy Tickets' purchase card…")
+        card = self.page.locator("[aria-label='AcquistaBiglietti'], [aria-label='BuyTickets'], [aria-label='Buy Tickets']")
+        card.first.click(force=True)
         time.sleep(2)
 
     def _select_offer(self, category: str):
@@ -187,8 +188,7 @@ class MuseumBooker:
             if not month_el.count():
                 break
             text = month_el.first.get_attribute("aria-label") or month_el.first.inner_text()
-            # text like "Mese selezionato Maggio 2026" or "Maggio 2026"
-            for fmt in ("%B %Y", "Mese selezionato %B %Y"):
+            for fmt in ("%B %Y", "Mese selezionato %B %Y", "Selected month %B %Y"):
                 try:
                     current = datetime.strptime(text.strip(), fmt)
                     break
@@ -200,8 +200,10 @@ class MuseumBooker:
             diff = (target.year - current.year) * 12 + (target.month - current.month)
             if diff == 0:
                 break
-            btn_label = "Mese successivo" if diff > 0 else "Mese precedente"
-            nav = self.page.locator(f"button.change-month-btn[aria-label='{btn_label}']")
+            if diff > 0:
+                nav = self.page.locator("button.change-month-btn[aria-label='Mese successivo'], button.change-month-btn[aria-label='Next month']")
+            else:
+                nav = self.page.locator("button.change-month-btn[aria-label='Mese precedente'], button.change-month-btn[aria-label='Previous month']")
             if not nav.count():
                 break
             nav.first.click()
@@ -313,7 +315,7 @@ class MuseumBooker:
             fwd.first.wait_for(state="visible", timeout=8_000)
         except PWTimeout:
             self.log("Forward button not visible — trying Prosegui fallback.")
-            alt = self.page.locator("button:has-text('Prosegui'):not([disabled]):not(.modal-btn)")
+            alt = self.page.locator("button:has-text('Prosegui'):not([disabled]):not(.modal-btn), button:has-text('Continue'):not([disabled]):not(.modal-btn)")
             if alt.count():
                 alt.first.click()
                 time.sleep(2)
