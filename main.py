@@ -11,30 +11,22 @@ from tkinter import filedialog, messagebox
 from booker import MuseumBooker
 
 
-def _ensure_browser():
-    """Download Playwright's Chromium on first run (silent, no console flash)."""
-    marker = Path.home() / ".museum-booker" / "browser_ready"
-    if marker.exists():
-        return
-    try:
-        import os
-        browsers_path = Path.home() / ".museum-booker" / "browsers"
-        os.environ["PLAYWRIGHT_BROWSERS_PATH"] = str(browsers_path)
+def _get_browsers_path() -> str:
+    """Return the path where Playwright should look for browsers."""
+    import os
+    # Check for bundled browsers next to the executable (PyInstaller build)
+    if getattr(sys, "frozen", False):
+        bundled = Path(sys.executable).parent / "browsers"
+        if bundled.exists():
+            return str(bundled)
+    # Fallback to user home directory
+    return str(Path.home() / ".museum-booker" / "browsers")
 
-        from playwright._impl._driver import compute_driver_executable
-        driver = compute_driver_executable()
-        kwargs = {"capture_output": True}
-        env = os.environ.copy()
-        env["PLAYWRIGHT_BROWSERS_PATH"] = str(browsers_path)
-        if sys.platform == "win32":
-            kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
-        result = subprocess.run(
-            [str(driver), "install", "chromium"], env=env, **kwargs)
-        if result.returncode == 0:
-            marker.parent.mkdir(parents=True, exist_ok=True)
-            marker.touch()
-    except Exception:
-        pass
+
+def _ensure_browser():
+    """Set up Playwright browser path. Bundled builds already include Chromium."""
+    import os
+    os.environ["PLAYWRIGHT_BROWSERS_PATH"] = _get_browsers_path()
 
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")

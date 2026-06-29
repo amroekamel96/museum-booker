@@ -17,6 +17,7 @@ Confirmed booking flow (Pantheon + generic portal museums):
 """
 
 import os
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
@@ -27,11 +28,6 @@ from playwright.sync_api import (
     Locator,
     sync_playwright,
     TimeoutError as PWTimeout,
-)
-
-os.environ.setdefault(
-    "PLAYWRIGHT_BROWSERS_PATH",
-    str(Path.home() / ".museum-booker" / "browsers"),
 )
 
 SEARCH_URL = "https://www.museiitaliani.it/acquista-biglietto"
