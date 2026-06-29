@@ -217,12 +217,28 @@ class MuseumBookerApp(ctk.CTk):
             return
         try:
             with open(path, newline="", encoding="utf-8") as fh:
-                for row in csv.DictReader(fh):
-                    self._add_visitor_row(
-                        row.get("first_name") or row.get("First Name", ""),
-                        row.get("last_name") or row.get("Last Name", ""),
-                        row.get("email") or row.get("Email", ""),
-                    )
+                first_line = fh.readline().strip().lower()
+                fh.seek(0)
+                has_headers = any(h in first_line for h in (
+                    "first_name", "first name", "last_name", "last name", "email"))
+
+                if has_headers:
+                    for row in csv.DictReader(fh):
+                        self._add_visitor_row(
+                            row.get("first_name") or row.get("First Name", ""),
+                            row.get("last_name") or row.get("Last Name", ""),
+                            row.get("email") or row.get("Email", ""),
+                        )
+                else:
+                    for line in fh:
+                        name = line.strip()
+                        if not name:
+                            continue
+                        parts = name.split(None, 1)
+                        first = parts[0] if parts else ""
+                        last = parts[1] if len(parts) > 1 else ""
+                        self._add_visitor_row(first, last, "")
+
             self._log(f"Imported visitors from {path}")
         except Exception as exc:
             messagebox.showerror("CSV Error", str(exc))
