@@ -73,7 +73,7 @@ class MuseumBooker:
                 self._select_offer(data["category"])
                 self._pick_date_and_slot(data["date"], data.get("timeslot", ""))
                 self._click_forward()          # "Prosegui" from calendar to quantities
-                self._set_quantities(data["quantities"], visitor_count=len(data.get("visitors", [])))
+                self._set_quantities(data["quantities"])
                 self._click_forward()          # "Acquista N biglietti" or forward from quantities
                 self._guest_checkout()         # click "Prosegui come ospite"
                 self._fill_visitors(data["visitors"])
@@ -267,7 +267,7 @@ class MuseumBooker:
         badges.first.click()
         time.sleep(1)
 
-    def _set_quantities(self, quantities: dict[str, int], visitor_count: int = 0):
+    def _set_quantities(self, quantities: dict[str, int]):
         """Set ticket quantities using +/- counter buttons."""
         ticket_cards = self.page.locator("single-ticket-selector")
         try:
@@ -275,11 +275,6 @@ class MuseumBooker:
         except PWTimeout:
             self.log("No quantity controls found — skipping.")
             return
-
-        has_explicit = any(v > 0 for v in quantities.values())
-        if not has_explicit and visitor_count > 0:
-            quantities = {"Full price": visitor_count}
-            self.log(f"No explicit quantities — defaulting to {visitor_count} Full price ticket(s).")
 
         self.log("Setting ticket quantities…")
         for ticket_type, qty in quantities.items():
@@ -362,9 +357,9 @@ class MuseumBooker:
             time.sleep(0.4)
         time.sleep(0.5)
 
-        name_inputs    = self.page.locator("input[formcontrolname='name'][placeholder='Nome']")
-        last_inputs    = self.page.locator("input[formcontrolname='lastname'][placeholder='Cognome']")
-        email_inputs   = self.page.locator("input[formcontrolname='email'][placeholder='Email']")
+        name_inputs    = self.page.locator("input[formcontrolname='name']")
+        last_inputs    = self.page.locator("input[formcontrolname='lastname']")
+        email_inputs   = self.page.locator("input[formcontrolname='email']")
         confirm_inputs = self.page.locator("input[formcontrolname='confirmEmail']")
 
         # Wait for inputs to be visible after expanding
@@ -388,7 +383,8 @@ class MuseumBooker:
                     self.log(f"  Cannot add visitor {i + 1}: no 'Add visitor' button found.")
                     break
 
-            self.log(f"  Visitor {i + 1}: {visitor['first_name']} {visitor['last_name']}")
+            tag = " (Kid)" if visitor.get("is_kid") else ""
+            self.log(f"  Visitor {i + 1}: {visitor['first_name']} {visitor['last_name']}{tag}")
             name_inputs.nth(i).fill(visitor["first_name"])
             last_inputs.nth(i).fill(visitor["last_name"])
             email_inputs.nth(i).fill(visitor["email"])

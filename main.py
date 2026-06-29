@@ -121,30 +121,20 @@ class MuseumBookerApp(ctk.CTk):
             row=r, column=0, columnspan=2, sticky="ew", padx=12, pady=(0, 10))
         r += 1
 
-        # Quantities — only used for non-calendar offers (Anfiteatro style)
-        # For the Pantheon the visitor count sets the quantity automatically
-        qty_note = ctk.CTkLabel(
-            p,
-            text="Ticket quantities (for non-calendar museums only —\n"
-                 "Pantheon derives count from the visitors list below)",
-            font=ctk.CTkFont(weight="bold"), anchor="w", wraplength=320,
-            justify="left")
-        qty_note.grid(row=r, column=0, columnspan=2, sticky="w", padx=12, pady=(10, 4))
+        # Shared email
+        ctk.CTkLabel(p, text="Email (used for all visitors)", anchor="w").grid(
+            row=r, column=0, columnspan=2, sticky="w", padx=12, pady=(6, 2))
+        r += 1
+        self.email_var = ctk.StringVar()
+        ctk.CTkEntry(p, textvariable=self.email_var,
+                     placeholder_text="email@example.com").grid(
+            row=r, column=0, columnspan=2, sticky="ew", padx=12, pady=(0, 10))
         r += 1
 
-        self.qty_vars: dict[str, ctk.IntVar] = {}
-        for ticket_type in ("Full price", "Reduced", "Free", "Tour Leader"):
-            ctk.CTkLabel(p, text=ticket_type, anchor="w").grid(
-                row=r, column=0, sticky="w", padx=12, pady=3)
-            var = ctk.IntVar(value=0)
-            self.qty_vars[ticket_type] = var
-            ctk.CTkEntry(p, textvariable=var, width=70).grid(
-                row=r, column=1, sticky="e", padx=12, pady=3)
-            r += 1
-
         # Visitors header
-        ctk.CTkLabel(p, text="Visitors",
-                     font=ctk.CTkFont(weight="bold"), anchor="w").grid(
+        ctk.CTkLabel(p, text="Visitors (prefix name with 'Kid' for free tickets)",
+                     font=ctk.CTkFont(weight="bold"), anchor="w",
+                     wraplength=320, justify="left").grid(
             row=r, column=0, columnspan=2, sticky="w", padx=12, pady=(14, 4))
         r += 1
 
@@ -187,30 +177,30 @@ class MuseumBookerApp(ctk.CTk):
     def _add_visitor_header(self):
         hdr = ctk.CTkFrame(self.visitor_container, fg_color="transparent")
         hdr.pack(fill="x", pady=(0, 2))
-        for text, w in (("First name", 130), ("Last name", 130), ("Email", 180)):
+        for text, w in (("Name", 220), ("Last name", 130), ("Type", 60)):
             ctk.CTkLabel(hdr, text=text, width=w, anchor="w").pack(side="left", padx=2)
 
-    def _add_visitor_row(self, first="", last="", email=""):
+    def _add_visitor_row(self, first="", last=".", is_kid=False):
         row_frame = ctk.CTkFrame(self.visitor_container, fg_color="transparent")
         row_frame.pack(fill="x", pady=2)
 
         v_first = ctk.StringVar(value=first)
         v_last = ctk.StringVar(value=last)
-        v_email = ctk.StringVar(value=email)
+        v_kid = ctk.BooleanVar(value=is_kid)
 
-        ctk.CTkEntry(row_frame, textvariable=v_first, width=130,
-                     placeholder_text="First").pack(side="left", padx=2)
+        ctk.CTkEntry(row_frame, textvariable=v_first, width=220,
+                     placeholder_text="Full name").pack(side="left", padx=2)
         ctk.CTkEntry(row_frame, textvariable=v_last, width=130,
-                     placeholder_text="Last").pack(side="left", padx=2)
-        ctk.CTkEntry(row_frame, textvariable=v_email, width=180,
-                     placeholder_text="email@example.com").pack(side="left", padx=2)
+                     placeholder_text=".").pack(side="left", padx=2)
+        ctk.CTkCheckBox(row_frame, text="Kid", variable=v_kid,
+                        width=60).pack(side="left", padx=2)
         ctk.CTkButton(
             row_frame, text="x", width=28, height=28,
             fg_color="#c0392b", hover_color="#e74c3c",
             command=lambda f=row_frame: self._remove_visitor_row(f)
         ).pack(side="left", padx=(4, 0))
 
-        self._visitor_rows.append((row_frame, v_first, v_last, v_email))
+        self._visitor_rows.append((row_frame, v_first, v_last, v_kid))
 
     def _remove_visitor_row(self, frame):
         self._visitor_rows = [
@@ -225,37 +215,32 @@ class MuseumBookerApp(ctk.CTk):
             return
         try:
             with open(path, newline="", encoding="utf-8") as fh:
-                first_line = fh.readline().strip().lower()
-                fh.seek(0)
-                has_headers = any(h in first_line for h in (
-                    "first_name", "first name", "last_name", "last name", "email"))
-
-                if has_headers:
-                    for row in csv.DictReader(fh):
-                        self._add_visitor_row(
-                            row.get("first_name") or row.get("First Name", ""),
-                            row.get("last_name") or row.get("Last Name", ""),
-                            row.get("email") or row.get("Email", ""),
-                        )
-                else:
-                    for line in fh:
-                        name = line.strip()
-                        if not name:
-                            continue
-                        self._add_visitor_row(name, ".", "")
+                for line in fh:
+                    name = line.strip()
+                    if not name:
+                        continue
+                    is_kid = name.lower().startswith("kid ")
+                    if is_kid:
+                        name = name[4:].strip()
+                    self._add_visitor_row(name, ".", is_kid)
 
             self._log(f"Imported visitors from {path}")
         except Exception as exc:
             messagebox.showerror("CSV Error", str(exc))
 
     def _get_visitors(self) -> list[dict]:
+        email = self.email_var.get().strip()
         result = []
-        for _, v_first, v_last, v_email in self._visitor_rows:
+        for _, v_first, v_last, v_kid in self._visitor_rows:
             first = v_first.get().strip()
             last = v_last.get().strip()
-            email = v_email.get().strip()
-            if first or last or email:
-                result.append({"first_name": first, "last_name": last, "email": email})
+            if first or last:
+                result.append({
+                    "first_name": first,
+                    "last_name": last,
+                    "email": email,
+                    "is_kid": v_kid.get(),
+                })
         return result
 
     # ------------------------------------------------------------------ booking
@@ -276,13 +261,17 @@ class MuseumBookerApp(ctk.CTk):
         if not self._validate():
             return
 
+        visitors = self._get_visitors()
+        adults = [v for v in visitors if not v["is_kid"]]
+        kids = [v for v in visitors if v["is_kid"]]
+
         data = {
             "museum": self.museum_var.get().strip(),
             "date": self.date_var.get().strip(),
             "timeslot": self.timeslot_var.get().strip(),
             "category": self.category_var.get(),
-            "quantities": {k: v.get() for k, v in self.qty_vars.items()},
-            "visitors": self._get_visitors(),
+            "quantities": {"Full price": len(adults), "Free": len(kids)},
+            "visitors": adults + kids,
         }
 
         self.start_btn.configure(state="disabled", text="Booking in progress…")
